@@ -14,7 +14,9 @@ export default class Index extends React.Component {
           </li>
           <li>Webpack Electron Dashboard</li>
           <li>InspectPack</li>
-          <li>Nodejs Dashboard</li>
+          <li>
+            <Link to="/nodejs-dashboard/">Nodejs Dashboard</Link>
+          </li>
         </ol>
       </section>
     );

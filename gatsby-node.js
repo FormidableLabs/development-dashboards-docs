@@ -31,8 +31,14 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     const configName = fileNode.sourceInstanceName;
 
     // create slug
-    if (parsedFilePath.name !== "index" && parsedFilePath.dir !== "") {
+    if (
+      fileNode.name !== "README" &&
+      parsedFilePath.name !== "index" &&
+      parsedFilePath.dir !== ""
+    ) {
       slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
+    } else if (fileNode.name === "README") {
+      slug = `/${parsedFilePath.dir}`;
     } else if (parsedFilePath.dir === "") {
       slug = `/${parsedFilePath.name}/`;
     } else {

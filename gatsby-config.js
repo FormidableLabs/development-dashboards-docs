@@ -32,6 +32,13 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "nodejs-dashboard",
+        path: `${__dirname}/node_modules/nodejs-dashboard/README.md`
+      }
+    },
+    {
       resolve: "gatsby-plugin-postcss-sass",
       options: {
         postCssPlugins: [
