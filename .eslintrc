@@ -1,0 +1,7 @@
+---
+extends:
+  - "formidable/configurations/es6-react"
+
+globals:
+  __dirname: true
+  exports: true
