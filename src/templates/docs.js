@@ -1,10 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-
-import Footer from "../partials/footer";
-// import Playground from "../partials/playground";
-// import Seo from "../partials/seo/index";
 import config from "../../data/site-config";
 
 class DocsTemplate extends React.Component {
@@ -15,16 +11,6 @@ class DocsTemplate extends React.Component {
     if (!post.id) {
       post.id = slug;
     }
-    if (!post.id) {
-      post.categoryId = config.postDefaultCategoryID;
-    }
-
-    // <Seo postPath={slug} postNode={postNode} postSEO />
-    // <Playground
-    //   html={postNode.html}
-    //   scope={post.scope}
-    //   theme="elegant"
-    // />
 
     return (
       <div className="Page-content">
@@ -36,7 +22,6 @@ class DocsTemplate extends React.Component {
           className="Article"
           dangerouslySetInnerHTML={{ __html: postNode.html }}
         />
-        <Footer />
       </div>
     );
   }
