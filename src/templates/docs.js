@@ -32,14 +32,10 @@ class DocsTemplate extends React.Component {
           <title>{`${config.siteTitle} |  ${post.title}`}</title>
           <meta name="description" content={config.siteDescription} />
         </Helmet>
-        <article className="Article">
-          <div className="Recipe Markdown">
-            {/* TODO: Add edit this page link once everything is merged to master
-              <a className="SubHeading" href="">Edit this page</a>
-            */}
-            {postNode.html}
-          </div>
-        </article>
+        <article
+          className="Article"
+          dangerouslySetInnerHTML={{ __html: postNode.html }}
+        />
         <Footer />
       </div>
     );
@@ -58,8 +54,6 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
-        id
-        scope
         title
       }
       fields {

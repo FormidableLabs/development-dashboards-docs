@@ -25,6 +25,13 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "webpack-dashboard",
+        path: `${__dirname}/node_modules/webpack-dashboard/docs/`
+      }
+    },
+    {
       resolve: "gatsby-plugin-postcss-sass",
       options: {
         postCssPlugins: [

@@ -28,14 +28,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   if (node.internal.type === "MarkdownRemark") {
     const fileNode = getNode(node.parent);
     const parsedFilePath = path.parse(fileNode.relativePath);
-
-    // manually overriding slug in frontmatter
-    if (
-      Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
-      Object.prototype.hasOwnProperty.call(node.frontmatter, "slug")
-    ) {
-      slug = `/${_.kebabCase(node.frontmatter.slug)}`;
-    }
+    const configName = fileNode.sourceInstanceName;
 
     // create slug
     if (parsedFilePath.name !== "index" && parsedFilePath.dir !== "") {
@@ -46,12 +39,18 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       slug = `/${parsedFilePath.dir}/`;
     }
 
-    // Add raw content for galleries
-    let raw = "";
-    if (parsedFilePath.dir === "gallery") {
-      raw = node.internal.content;
+    // Prefix slug with options.name set in config (for markdown files pulled from node_modules)
+    if (configName !== "pages") {
+      slug = `/${configName}${slug}`;
     }
-    createNodeField({ node, name: "raw", value: raw });
+
+    // manually overriding slug in frontmatter
+    if (
+      Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
+      Object.prototype.hasOwnProperty.call(node.frontmatter, "slug")
+    ) {
+      slug = `/${_.kebabCase(node.frontmatter.slug)}`;
+    }
 
     // Add slug as a field on the node.
     createNodeField({ node, name: "slug", value: slug });
@@ -82,7 +81,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               edges {
                 node {
                   frontmatter {
-                    id
+                    title
                   }
                   headings {
                     depth
@@ -91,7 +90,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                   fields {
                     slug
                     type
-                    raw
                   }
                 }
               }
