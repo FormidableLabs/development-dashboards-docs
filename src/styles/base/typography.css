@@ -1,0 +1,35 @@
+/**
+* Typography
+*/
+
+/* custom fallback */
+html:not(.lazer84-active) .HeadingA {
+  font-family: "Arial Black", "Impact", sans-serif;
+  font-size: 72px;
+  font-style: italic;
+  letter-spacing: -0.066em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+html.lazer84-active .HeadingA {
+  font-family: "Lazer84", sans-serif;
+  font-size: 72px;
+  line-height: 1.2;
+}
+
+.HeadingA--hero {
+  background-image: linear-gradient(
+    90deg,
+    var(--pink) 4%,
+    var(--orange) 28%,
+    var(--yellow) 47%,
+    var(--green) 72%,
+    var(--blue) 98%
+  );
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  filter: drop-shadow(4px 4px 0px var(--black));
+}

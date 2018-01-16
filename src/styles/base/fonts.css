@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "lazer84";
+  src: url("../../../static/fonts/lazer84.woff2") format("woff2"),
+    url("../../../static/fonts/lazer84.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}

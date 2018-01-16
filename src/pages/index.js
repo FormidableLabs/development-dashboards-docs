@@ -5,9 +5,11 @@ import Link from "gatsby-link";
 export default class Index extends React.Component {
   render() {
     return (
-      <section>
-        <h1>Development Dashboards</h1>
-        <h2>by Formidable Open Source</h2>
+      <main>
+        <div className="Hero">
+          <h1 className="HeadingA HeadingA--hero">Development Dashboards</h1>
+          <h2>by Formidable Open Source</h2>
+        </div>
         <ol>
           <li>
             <Link to="/webpack-dashboard/">Webpack Dashboard</Link>
@@ -18,7 +20,7 @@ export default class Index extends React.Component {
             <Link to="/nodejs-dashboard/">Nodejs Dashboard</Link>
           </li>
         </ol>
-      </section>
+      </main>
     );
   }
 }

@@ -4432,6 +4432,10 @@ fn-name@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/fn-name/-/fn-name-2.0.1.tgz#5214d7537a4d06a4a301c0cc262feb84188002e7"
 
+fontfaceobserver@^2.0.13:
+  version "2.0.13"
+  resolved "https://registry.npmjs.org/fontfaceobserver/-/fontfaceobserver-2.0.13.tgz#47adbb343261eda98cb44db2152196ff124d3221"
+
 for-each@^0.3.2:
   version "0.3.2"
   resolved "https://registry.npmjs.org/for-each/-/for-each-0.3.2.tgz#2c40450b9348e97f281322593ba96704b9abd4d4"

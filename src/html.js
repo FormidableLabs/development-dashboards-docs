@@ -4,6 +4,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import favicon from "../static/logos/favicon.ico";
+import lazer84woff from "../static/fonts/lazer84.woff";
+import lazer84woff2 from "../static/fonts/lazer84.woff2";
 
 let inlinedStyles = "";
 if (process.env.NODE_ENV === "production") {
@@ -27,6 +29,7 @@ class HTML extends React.Component {
         />
       );
     }
+
     return (
       <html lang="en">
         <head>
@@ -43,10 +46,11 @@ class HTML extends React.Component {
           {css}
 
           {/* Fonts */}
-          <link href="https://formidable.com/open-source/fonts.css" rel="stylesheet" type="text/css" />
-          <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet" />
-          <link href="https://fonts.googleapis.com/css?family=Andada" rel="stylesheet" />
 
+          <link rel="preload" href={lazer84woff} as="font" />
+          <link rel="preload" href={lazer84woff2} as="font" />
+
+          {/* Preload hero image <link rel="preload" href="article-lead-sm.jpg" as="image" type="image/jpeg" media="only screen and (max-width: 48rem)"> */}
         </head>
         <body>
           <div

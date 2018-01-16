@@ -4,8 +4,9 @@ import Helmet from "react-helmet";
 import { Footer } from "formidable-landers";
 import config from "../../data/site-config";
 import "../styles/styles.css";
+import FontFaceObserver from "fontfaceobserver";
 
-class MainLayout extends React.Component {
+class Layout extends React.Component {
   getLocalTitle() {
     const capitalize = (string) => {
       return string.charAt(0).toUpperCase() + string.slice(1);
@@ -29,12 +30,20 @@ class MainLayout extends React.Component {
   render() {
     const { children } = this.props;
 
+    const lazer84Observer = new FontFaceObserver("Lazer84", {
+      style: "italic"
+    });
+    lazer84Observer.load().then(() => {
+      document.documentElement.classList.add("lazer84-active");
+    });
+
     return (
       <div>
         <Helmet>
           <title>{`${config.siteTitle} |  ${this.getLocalTitle()}`}</title>
           <meta name="description" content={config.siteDescription} />
         </Helmet>
+        <header className="Header">Formidable</header>
         {children()}
         <Footer />
       </div>
@@ -42,10 +51,10 @@ class MainLayout extends React.Component {
   }
 }
 
-MainLayout.propTypes = {
+Layout.propTypes = {
   children: PropTypes.any,
   history: PropTypes.any,
   location: PropTypes.object
 };
 
-export default MainLayout;
+export default Layout;

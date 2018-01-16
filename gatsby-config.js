@@ -25,20 +25,6 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "webpack-dashboard",
-        path: `${__dirname}/node_modules/webpack-dashboard/docs/`
-      }
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "nodejs-dashboard",
-        path: `${__dirname}/node_modules/nodejs-dashboard/README.md`
-      }
-    },
-    {
       resolve: "gatsby-plugin-postcss-sass",
       options: {
         postCssPlugins: [
@@ -49,24 +35,6 @@ module.exports = {
           require("postcss-inline-svg")(),
           require("postcss-browser-reporter"),
           require("postcss-reporter")
-        ]
-      }
-    },
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [
-          {
-            resolve: "gatsby-remark-images",
-            options: {
-              linkImagesToOriginal: false
-            }
-          },
-          "gatsby-remark-responsive-iframe",
-          "gatsby-remark-copy-linked-files",
-          "gatsby-remark-autolink-headers",
-          "gatsby-remark-smartypants",
-          "gatsby-remark-prismjs"
         ]
       }
     },

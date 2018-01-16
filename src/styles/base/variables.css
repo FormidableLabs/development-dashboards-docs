@@ -1,0 +1,15 @@
+:root {
+  /* Colors */
+  --blue: #38c8ef;
+  --pink: #f038b3;
+  --orange: #f28e5c;
+  --yellow: #f0dd3f;
+  --green: #8ae98b;
+
+  --light-navy: #02243c;
+  --navy: #000f19;
+  --dark-navy: #00101a;
+
+  --black: #000;
+  --white: #fff;
+}

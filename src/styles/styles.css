@@ -3,6 +3,31 @@
 * Foundational styles
 *
 * normalize:   reset the browsers
+* variables:   var(--color-*), var(--size-*)
+* fonts:       custom @font-face declarations
+* typography:  typography styles
 *
 */
 @import "../../node_modules/normalize.css";
+@import "./base/variables.css";
+@import "./base/fonts.css";
+@import "./base/typography.css";
+
+html {
+  background-color: var(--dark-navy);
+  color: var(--white);
+}
+
+.Header {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+.HeadingB {
+  font-family: Montserrat;
+}
+
+.Hero {
+  text-align: center;
+  background-color: var(--navy);
+}

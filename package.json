@@ -12,6 +12,7 @@
   },
   "homepage": "https://github.com/FormidableLabs/development-dashboards-docs#readme",
   "dependencies": {
+    "fontfaceobserver": "^2.0.13",
     "formidable-landers": "^7.0.0",
     "gatsby": "^1.9.155",
     "gatsby-link": "^1.6.7",
