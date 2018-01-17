@@ -38,7 +38,7 @@ export default class Index extends React.Component {
             inspectpack is an inspection tool for webpack JavaScript bundles
             that gives you insight into your production bundles to help
             determine where you can cut down on size, duplicates, and more. If
-            you don't need a dashboard, inspectpack provides you with the raw
+            you don’t need a dashboard, inspectpack provides you with the raw
             power tools behind webpack-dashboard and electron-webpack-dashboard.
           </p>
           <Install accent="yellow">npm install -g inspectpack</Install>
