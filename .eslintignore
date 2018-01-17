@@ -1,8 +1,5 @@
-# Ignore plugins 
-plugins/*
+# Ignore built files
+public/*
 
-# Ignore built files 
-public/* 
-
-# Ignore static assets 
+# Ignore static assets
 static/*
