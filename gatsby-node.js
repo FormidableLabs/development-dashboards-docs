@@ -64,7 +64,8 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     // Separate /docs from /guides for <Sidebar />
     createNodeField({ node, name: "type", value: parsedFilePath.dir });
 
-    const useSidebar = parsedFilePath.dir === "docs" || parsedFilePath.dir === "guides";
+    const useSidebar =
+      parsedFilePath.dir === "docs" || parsedFilePath.dir === "guides";
     createNodeField({ node, name: "sidebar", value: useSidebar });
   }
 };
