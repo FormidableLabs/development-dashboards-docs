@@ -1,21 +1,43 @@
-/**
-* Typography
-*/
+/*
 
-/* custom fallback */
+   TYPOGRAPHY
+
+   "Flash of Faux Text"
+   Once custom fonts are loaded, a class gets added to `html`
+   custom heading fallbacks created with https://meowni.ca/font-style-matcher/
+
+*/
+/*
+    Default
+*/
+html:not(.exo-active) {
+  font-family: "Helvetica", sans-serif;
+  line-height: 2;
+}
+
+html.exo-active {
+  font-family: "Exo", sans-serif;
+  line-height: 2;
+}
+/*
+    HeadingA
+*/
 html:not(.lazer84-active) .HeadingA {
   font-family: "Arial Black", "Impact", sans-serif;
-  font-size: 72px;
-  font-style: italic;
-  letter-spacing: -0.066em;
-  line-height: 1.2;
-  text-transform: uppercase;
+  letter-spacing: -0.075em;
 }
 
 html.lazer84-active .HeadingA {
-  font-family: "Lazer84", sans-serif;
-  font-size: 72px;
+  font-family: "lazer84", sans-serif;
+}
+
+.HeadingA {
+  font-size: var(--s6);
+  font-style: italic;
+  font-weight: normal;
   line-height: 1.2;
+  text-transform: uppercase;
+  filter: drop-shadow(var(--s1) var(--s1) 0 var(--black));
 }
 
 .HeadingA--hero {
@@ -28,8 +50,26 @@ html.lazer84-active .HeadingA {
     var(--blue) 98%
   );
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
   position: relative;
-  filter: drop-shadow(4px 4px 0px var(--black));
+}
+/*
+    HeadingB
+*/
+html:not(.montserrat-active) .HeadingB {
+  font-family: "Helvetica", "Arial", sans-serif;
+  letter-spacing: 6px;
+}
+html.montserrat-active .HeadingB {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 5px;
+}
+.HeadingB {
+  display: block;
+  font-size: var(--s4);
+  font-weight: 700;
+  line-height: 1.5;
+  text-transform: uppercase;
 }

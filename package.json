@@ -73,12 +73,7 @@
     "stylelint": "^8.0.0",
     "stylelint-config-standard": "^17.0.0"
   },
-  "keywords": [
-    "gatsby",
-    "development dashboards",
-    "webpack dashboard",
-    "docs"
-  ],
+  "keywords": ["gatsby", "development dashboards", "webpack dashboard", "docs"],
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
@@ -98,28 +93,18 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
+        "<rootDir>/__mocks__/fileMock.js",
       "^(?!.*\\.module\\.css$).*\\.css$": "<rootDir>/__mocks__/styleMock.js"
     },
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "<rootDir>/.cache/"
-    ],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ]
+    "testPathIgnorePatterns": ["/node_modules/", "<rootDir>/.cache/"],
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
   },
   "remarkConfig": {
     "plugins": [
       "remark-preset-lint-recommended",
-      [
-        "remark-lint-list-item-indent",
-        false
-      ],
-      [
-        "remark-lint-list-item-bullet-indent",
-        false
-      ]
+      ["remark-lint-list-item-indent", false],
+      ["remark-lint-list-item-bullet-indent", false]
     ]
   }
 }

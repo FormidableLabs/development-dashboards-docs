@@ -1,0 +1,34 @@
+import React from "react";
+import PropTypes from "prop-types";
+
+// Section
+export default class Section extends React.Component {
+  render() {
+    const { accent, children, title, index } = this.props;
+    return (
+      <section className="Section pv6 ph2 mb5 bg-light-navy">
+        <div className="center mb0 mt0 mw11">
+          <header className="flex flex-row flex-nowrap justify-between align-center">
+            <span className="HeadingB">{title}</span>
+            <span
+              className={`HeadingA tracked-mega ${accent}`}
+              aria-hidden="true"
+            >
+              0{index}
+            </span>
+          </header>
+          <div className="flex flex-row flex-nowrap justify-center align-start">
+            {children}
+          </div>
+        </div>
+      </section>
+    );
+  }
+}
+
+Section.propTypes = {
+  accent: PropTypes.string,
+  children: PropTypes.node,
+  index: PropTypes.number,
+  title: PropTypes.string
+};

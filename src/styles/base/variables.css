@@ -1,5 +1,4 @@
 :root {
-  /* Colors */
   --blue: #38c8ef;
   --pink: #f038b3;
   --orange: #f28e5c;
@@ -12,4 +11,19 @@
 
   --black: #000;
   --white: #fff;
+
+  --base: 14px;
+
+  --s1: 0.25rem; /* 3.5px */
+  --s2: 0.5rem; /* 7px */
+  --s3: 1rem; /* 14px */
+  --s4: 1.5rem; /* 21px */
+  --s5: 2rem; /* 28px */
+  --s6: 5rem; /* 70px */
+  --s7: 8rem; /* 112px */
+  --s8: 16rem; /* 224px */
+  --s9: 32rem; /* 448px */
+  --s10: 48rem; /* 672px */
+  --s11: 64rem; /* 896px */
+  --s12: 96rem; /* 1344px */
 }
