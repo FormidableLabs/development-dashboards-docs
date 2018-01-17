@@ -1,0 +1,78 @@
+/*
+
+   COLORS
+
+*/
+.blue {
+  color: var(--blue);
+}
+.pink {
+  color: var(--pink);
+}
+.orange {
+  color: var(--orange);
+}
+.yellow {
+  color: var(--yellow);
+}
+.green {
+  color: var(--green);
+}
+.light-navy {
+  color: var(--light-navy);
+}
+.navy {
+  color: var(--navy);
+}
+.dark-navy {
+  color: var(--dark-navy);
+}
+.black {
+  color: var(--black);
+}
+.white {
+  color: var(--white);
+}
+
+.bg-blue {
+  background-color: var(--blue);
+}
+.bg-pink {
+  background-color: var(--pink);
+}
+.bg-orange {
+  background-color: var(--orange);
+}
+.bg-yellow {
+  background-color: var(--yellow);
+}
+.bg-green {
+  background-color: var(--green);
+}
+.bg-light-navy {
+  background-color: var(--light-navy);
+}
+.bg-navy {
+  background-color: var(--navy);
+}
+.bg-dark-navy {
+  background-color: var(--dark-navy);
+}
+.bg-black {
+  background-color: var(--black);
+}
+.bg-black-50 {
+  background-color: color(var(--black) alpha(50%));
+}
+.bg-black-25 {
+  background-color: color(var(--black) alpha(25%));
+}
+.bg-white {
+  background-color: var(--white);
+}
+.bg-white-50 {
+  background-color: color(var(--white) alpha(50%));
+}
+.bg-white-25 {
+  background-color: color(var(--white) alpha(25%));
+}

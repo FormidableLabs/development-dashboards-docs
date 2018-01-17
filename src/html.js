@@ -1,8 +1,10 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import favicon from "../static/logos/favicon.ico";
+import lazer84woff from "../static/fonts/lazer84.woff";
+import lazer84woff2 from "../static/fonts/lazer84.woff2";
 
-let inlinedStyles = "";
+let stylesStr;
 if (process.env.NODE_ENV === "production") {
   try {
     // eslint-disable-next-line import/no-webpack-loader-syntax
@@ -12,51 +14,50 @@ if (process.env.NODE_ENV === "production") {
   }
 }
 
-class HTML extends React.Component {
+class HTML extends Component {
   render() {
     let css;
     if (process.env.NODE_ENV === "production") {
       css = (
         <style
           id="gatsby-inlined-css"
-          dangerouslySetInnerHTML={{ __html: inlinedStyles }}
+          dangerouslySetInnerHTML={{ __html: stylesStr }}
         />
       );
     }
     return (
-      <html lang="en">
+      <html lang="en" {...this.props.htmlAttributes}>
         <head>
           <meta charSet="utf-8" />
+          <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta
             name="viewport"
-            content="width=device-width, initial-scale=1.0"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
-
           {this.props.headComponents}
-
           <link rel="shortcut icon" href={favicon} />
-
-          {css}
-
           {/* Fonts */}
+          <link rel="preload" href={lazer84woff} as="font" />
+          <link rel="preload" href={lazer84woff2} as="font" />
           <link
-            href="https://formidable.com/open-source/fonts.css"
-            rel="stylesheet"
-            type="text/css"
-          />
-          <link
-            href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i"
+            preload
+            href="https://fonts.googleapis.com/css?family=Exo:400,400i|Montserrat:400,700"
             rel="stylesheet"
           />
+          {/* Preload hero image */}
           <link
-            href="https://fonts.googleapis.com/css?family=Andada"
-            rel="stylesheet"
+            rel="preload"
+            href="./static/bg-space.png"
+            as="image"
+            type="image/png"
           />
+          {css}
         </head>
-        <body>
+        <body {...this.props.bodyAttributes}>
+          {this.props.preBodyComponents}
           <div
+            key={"body"}
             id="___gatsby"
-            className="root"
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
@@ -68,8 +69,11 @@ class HTML extends React.Component {
 
 HTML.propTypes = {
   body: PropTypes.string,
+  bodyAttributes: PropTypes.any,
   headComponents: PropTypes.array,
-  postBodyComponents: PropTypes.any
+  htmlAttributes: PropTypes.any,
+  postBodyComponents: PropTypes.any,
+  preBodyComponents: PropTypes.any
 };
 
-export default HTML;
+module.exports = HTML;
