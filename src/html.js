@@ -1,6 +1,3 @@
-/* eslint import/no-unresolved:"off" */
-/* eslint import/extensions:"off" */
-/* eslint global-require:"off" */
 import React from "react";
 import PropTypes from "prop-types";
 import favicon from "../static/logos/favicon.ico";
@@ -8,11 +5,10 @@ import favicon from "../static/logos/favicon.ico";
 let inlinedStyles = "";
 if (process.env.NODE_ENV === "production") {
   try {
-    /* eslint import/no-webpack-loader-syntax: off */
+    // eslint-disable-next-line import/no-webpack-loader-syntax
     inlinedStyles = require("!raw-loader!../public/styles.css");
   } catch (e) {
-    /* eslint no-console: "off"*/
-    console.log(e);
+    console.log(e); // eslint-disable-line no-console
   }
 }
 
@@ -43,10 +39,19 @@ class HTML extends React.Component {
           {css}
 
           {/* Fonts */}
-          <link href="https://formidable.com/open-source/fonts.css" rel="stylesheet" type="text/css" />
-          <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet" />
-          <link href="https://fonts.googleapis.com/css?family=Andada" rel="stylesheet" />
-
+          <link
+            href="https://formidable.com/open-source/fonts.css"
+            rel="stylesheet"
+            type="text/css"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Andada"
+            rel="stylesheet"
+          />
         </head>
         <body>
           <div
