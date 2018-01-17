@@ -7,11 +7,10 @@ import lazer84woff2 from "../static/fonts/lazer84.woff2";
 let stylesStr;
 if (process.env.NODE_ENV === "production") {
   try {
-    /* eslint import/no-webpack-loader-syntax: off */
-    stylesStr = require("!raw-loader!../public/styles.css");
+    // eslint-disable-next-line import/no-webpack-loader-syntax
+    inlinedStyles = require("!raw-loader!../public/styles.css");
   } catch (e) {
-    /* eslint no-console: "off"*/
-    console.warn(e);
+    console.log(e); // eslint-disable-line no-console
   }
 }
 
@@ -45,7 +44,13 @@ class HTML extends Component {
             href="https://fonts.googleapis.com/css?family=Exo:400,400i|Montserrat:400,700"
             rel="stylesheet"
           />
-          {/* Preload hero image <link rel="preload" href="article-lead-sm.jpg" as="image" type="image/jpeg" media="only screen and (max-width: 48rem)"> */}
+          {/* Preload hero image */}
+          <link
+            rel="preload"
+            href="./static/bg-space.png"
+            as="image"
+            type="image/png"
+          />
           {css}
         </head>
         <body {...this.props.bodyAttributes}>

@@ -5,12 +5,15 @@
   "author": "Formidable <hello@formidable.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FormidableLabs/development-dashboards-docs.git"
+    "url":
+      "git+https://github.com/FormidableLabs/development-dashboards-docs.git"
   },
   "bugs": {
-    "url": "https://github.com/FormidableLabs/development-dashboards-docs/issues"
+    "url":
+      "https://github.com/FormidableLabs/development-dashboards-docs/issues"
   },
-  "homepage": "https://github.com/FormidableLabs/development-dashboards-docs#readme",
+  "homepage":
+    "https://github.com/FormidableLabs/development-dashboards-docs#readme",
   "dependencies": {
     "fontfaceobserver": "^2.0.13",
     "formidable-landers": "^7.0.0",
@@ -46,16 +49,17 @@
     "react-live": "^1.7.1",
     "react-share": "^1.15.1",
     "react-twitter-widgets": "^1.4.0",
-    "webpack-dashboard": "git://github.com/FormidableLabs/webpack-dashboard.git#master"
+    "webpack-dashboard":
+      "git://github.com/FormidableLabs/webpack-dashboard.git#master"
   },
   "devDependencies": {
-    "babel-eslint": "^8.0.0",
+    "babel-eslint": "^8.2.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "cli-glob": "^0.1.0",
     "enzyme": "^2.9.1",
     "enzyme-to-json": "^2.0.1",
-    "eslint": "^3.19.0",
+    "eslint": "^4.15.0",
     "eslint-config-airbnb": "^15.0.2",
     "eslint-config-formidable": "^3.0.0",
     "eslint-config-prettier": "^2.3.0",
@@ -84,10 +88,10 @@
     "clean": "rm -rf public .cache",
     "lint:config": "eslint --print-config .",
     "lint:doctor": "eslint --print-config . | eslint-config-prettier-check",
-    "lint:js": "eslint --ext .js src",
+    "lint:js": "eslint --ext .js src .",
     "lint": "npm run lint:js",
     "test": "jest",
-    "format:js": "prettier '**/*.{js}' --write",
+    "format:js": "prettier '**/*.js' --write --arrow-parens always",
     "preversion": "npm run lint && npm run test",
     "version": "npm run clean && npm run build:pp"
   },
