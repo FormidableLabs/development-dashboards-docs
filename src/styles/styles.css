@@ -16,7 +16,7 @@
 /**
 
   COMPONENTS
-  atomic classes based on http://tachyons.io/
+  functional classes based on http://tachyons.io/
 
   borders:    border, border-color
   colors:     color, background-color
@@ -31,8 +31,13 @@
 @import "./components/spacing.css";
 @import "./components/text.css";
 
+* {
+  box-sizing: inherit;
+}
+
 html {
   background-color: var(--navy);
+  box-sizing: border-box;
   color: var(--white);
   font-size: var(--base);
 }
@@ -47,6 +52,54 @@ p {
   margin: 0 0 var(--s3) 0;
 }
 
+button {
+}
+
+svg {
+  fill: currentColor;
+}
+
+a:link {
+  color: inherit;
+  transition: opacity 250ms ease-in-out;
+}
+
+a:hover {
+  opacity: 0.8;
+  transition: opacity 250ms ease-in-out;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.Layout-Header {
+  height: 100px;
+}
+
+.Hero {
+  min-height: 300px;
+  height: 70vh;
+  position: relative;
+
+  background-image: url("../../static/bg-space.png");
+  background-size: cover;
+  border-top: 1px solid color(var(--white) alpha(15%));
+  border-bottom: 1px solid color(var(--white) alpha(15%));
+  box-shadow: 0 6px 3px 0 var(--black), 0 -4px 23px 0 var(--black);
+}
+
+.Hero-veil {
+  background-image: linear-gradient(
+    41deg,
+    color(var(--dark-navy) alpha(60%)) 0%,
+    color(var(--light-navy) alpha(60%)) 64%
+  );
+  margin: 0 auto;
+  width: 80vw;
+  max-width: 931px;
+}
+
 .Section {
   background-image: linear-gradient(
     41deg,
@@ -55,13 +108,51 @@ p {
   );
   border-top: 1px solid color(var(--white) alpha(15%));
   border-bottom: 1px solid color(var(--white) alpha(15%));
-  box-shadow: 0 4px 4px 0 var(--black);
+  box-shadow: 0 6px 3px 0 var(--black);
 }
 
 .code {
   font-family: "Menlo", "Consolas", "Courier", monospace;
 }
 
+/*
+
+   HEIGHTS
+
+*/
+.h1 {
+  height: var(--s1);
+}
+.h2 {
+  height: var(--s2);
+}
+.h3 {
+  height: var(--s3);
+}
+.h4 {
+  height: var(--s4);
+}
+.h5 {
+  height: var(--s5);
+}
+.h6 {
+  height: var(--s6);
+}
+.h7 {
+  height: var(--s7);
+}
+.h8 {
+  height: var(--s8);
+}
+.h9 {
+  height: var(--s9);
+}
+.h10 {
+  height: var(--s10);
+}
+.h11 {
+  height: var(--s11);
+}
 /*
 
    MAX WIDTHS

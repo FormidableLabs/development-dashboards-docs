@@ -1,10 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Link from "gatsby-link";
 import Helmet from "react-helmet";
 import FontFaceObserver from "fontfaceobserver";
 
 import { Footer } from "formidable-landers";
 import config from "../../data/site-config";
+import FORMIDABLELOGO from "../../static/logos/formidable.svg";
 import "../styles/styles.css";
 
 class Layout extends React.Component {
@@ -46,36 +48,21 @@ class Layout extends React.Component {
         console.warn("exo failed to load.", err);
       });
   }
-  getLocalTitle() {
-    const capitalize = (string) => {
-      return string.charAt(0).toUpperCase() + string.slice(1);
-    };
-    const pathPrefix = config.pathPrefix ? config.pathPrefix : "/";
-    const currentPath = this.props.location.pathname
-      .replace(pathPrefix, "")
-      .replace("/", "");
-    let title = "";
-    if (currentPath === "") {
-      title = "Home";
-    } else if (currentPath.includes("docs/")) {
-      const doc = currentPath
-        .replace("docs/", "")
-        .replace("/", "")
-        .replace("-", " ");
-      title = `${capitalize(doc)}`;
-    }
-    return title;
-  }
+
   render() {
     const { children } = this.props;
 
     return (
       <div>
         <Helmet>
-          <title>{`${config.siteTitle} |  ${this.getLocalTitle()}`}</title>
+          <title>{config.siteTitle}</title>
           <meta name="description" content={config.siteDescription} />
         </Helmet>
-        <header className="bg-navy white">Formidable</header>
+        <header className="Layout-Header bg-navy white pa5">
+          <a href="https://formidable.com">
+            <span dangerouslySetInnerHTML={{ __html: FORMIDABLELOGO }} />
+          </a>
+        </header>
         {children()}
         <Footer theme="light" />
       </div>

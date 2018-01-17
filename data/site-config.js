@@ -7,7 +7,7 @@ module.exports = {
   pathPrefix: "/open-source/development-dashboards", // Prefixes all links when deployed (amazing).
   googleAnalyticsID: "UA-43290258-1", // GA tracking ID.
   copyright: "Copyright © 2017. Formidable", // Copyright string for the footer of the website and RSS feed.
-  themeColor: "#c62828", // Used for setting manifest and progress theme colors.
+  themeColor: "#38c8ef", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0" // Used for setting manifest background color.
 };
 /* eslint-enable max-len */
