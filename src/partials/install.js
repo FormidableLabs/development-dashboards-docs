@@ -7,9 +7,7 @@ export default class Install extends React.Component {
     const { accent, children, order } = this.props;
     return (
       <div className={`m${order ? "r" : "l"}5 order-${order}`}>
-        <code className={`dib pa3 ba b--${accent} ws-nowrap bg-black-25`}>
-          {children}
-        </code>
+        <code className={`border--${accent}`}>{children}</code>
       </div>
     );
   }

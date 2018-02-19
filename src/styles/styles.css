@@ -1,37 +1,22 @@
-/**
-
-  BASE
-  Foundational styles
-
-  normalize:   reset the browsers
-  variables:   var(--color-*), var(--size-*)
-  fonts:       custom @font-face declarations
-  typography:  typography styles
-
-*/
+/* Base
+____________________________________________*/
 @import "../../node_modules/normalize.css";
 @import "./base/variables.css";
 @import "./base/fonts.css";
 @import "./base/typography.css";
-/**
+@import "./base/color.css";
 
-  COMPONENTS
-  functional classes based on http://tachyons.io/
+/* Components
+____________________________________________*/
+@import "./components/layout-header.css";
+@import "./components/hero.css";
+@import "./components/section.css";
 
-  borders:    border, border-color
-  colors:     color, background-color
-  flex:       flexbox
-  spacing:    margin, padding
-  text:       text-align, letter-spacing, white-space
-
-*/
-@import "./components/borders.css";
-@import "./components/colors.css";
-@import "./components/flex.css";
-@import "./components/spacing.css";
-@import "./components/text.css";
-
-* {
+/* Global Resets
+____________________________________________*/
+*,
+*:after,
+*:before {
   box-sizing: inherit;
 }
 
@@ -39,7 +24,15 @@ html {
   background-color: var(--navy);
   box-sizing: border-box;
   color: var(--white);
+  font-size: var(--root);
+}
+
+body {
   font-size: var(--base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+  -webkit-overflow-scrolling: touch;
 }
 
 h1,
@@ -49,10 +42,7 @@ h4,
 h5,
 h6,
 p {
-  margin: 0 0 var(--s3) 0;
-}
-
-button {
+  margin: 0;
 }
 
 svg {
@@ -61,151 +51,20 @@ svg {
 
 a:link {
   color: inherit;
-  transition: opacity 250ms ease-in-out;
-}
-
-a:hover {
-  opacity: 0.8;
-  transition: opacity 250ms ease-in-out;
 }
 
 a:visited {
   color: inherit;
 }
 
-.Layout-Header {
-  height: 100px;
+::-moz-selection {
+  background: var(--pink);
+  color: var(--white);
+  text-shadow: none;
 }
 
-.Hero {
-  min-height: 300px;
-  height: 70vh;
-  position: relative;
-
-  background-image: url("../../static/bg-space.png");
-  background-size: cover;
-  border-top: 1px solid color(var(--white) alpha(15%));
-  border-bottom: 1px solid color(var(--white) alpha(15%));
-  box-shadow: 0 6px 3px 0 var(--black), 0 -4px 23px 0 var(--black);
-}
-
-.Hero-veil {
-  background-image: linear-gradient(
-    41deg,
-    color(var(--dark-navy) alpha(60%)) 0%,
-    color(var(--light-navy) alpha(60%)) 64%
-  );
-  margin: 0 auto;
-  width: 80vw;
-  max-width: 931px;
-}
-
-.Section {
-  background-image: linear-gradient(
-    41deg,
-    var(--dark-navy) 0%,
-    var(--light-navy) 64%
-  );
-  border-top: 1px solid color(var(--white) alpha(15%));
-  border-bottom: 1px solid color(var(--white) alpha(15%));
-  box-shadow: 0 6px 3px 0 var(--black);
-}
-
-.code {
-  font-family: "Menlo", "Consolas", "Courier", monospace;
-}
-
-/*
-
-   HEIGHTS
-
-*/
-.h1 {
-  height: var(--s1);
-}
-.h2 {
-  height: var(--s2);
-}
-.h3 {
-  height: var(--s3);
-}
-.h4 {
-  height: var(--s4);
-}
-.h5 {
-  height: var(--s5);
-}
-.h6 {
-  height: var(--s6);
-}
-.h7 {
-  height: var(--s7);
-}
-.h8 {
-  height: var(--s8);
-}
-.h9 {
-  height: var(--s9);
-}
-.h10 {
-  height: var(--s10);
-}
-.h11 {
-  height: var(--s11);
-}
-/*
-
-   MAX WIDTHS
-
-*/
-.mw-100 {
-  max-width: 100%;
-}
-.mw1 {
-  max-width: var(--s1);
-}
-.mw2 {
-  max-width: var(--s2);
-}
-.mw3 {
-  max-width: var(--s3);
-}
-.mw4 {
-  max-width: var(--s4);
-}
-.mw5 {
-  max-width: var(--s5);
-}
-.mw6 {
-  max-width: var(--s6);
-}
-.mw7 {
-  max-width: var(--s7);
-}
-.mw8 {
-  max-width: var(--s8);
-}
-.mw9 {
-  max-width: var(--s9);
-}
-.mw10 {
-  max-width: var(--s10);
-}
-.mw11 {
-  max-width: var(--s11);
-}
-/*
-
-   VISIBILITY
-
-*/
-/*
-    Text that is hidden but accessible
-    Ref: http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-*/
-.clip {
-  position: fixed !important;
-  _position: absolute !important;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
+::selection {
+  background: var(--pink);
+  color: var(--white);
+  text-shadow: none;
 }

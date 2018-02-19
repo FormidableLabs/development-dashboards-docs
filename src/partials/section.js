@@ -6,22 +6,20 @@ export default class Section extends React.Component {
   render() {
     const { accent, children, title, index } = this.props;
     return (
-      <section className="Section pv6 ph2 mb5 bg-light-navy">
-        <div className="center mb0 mt0 mw11">
-          <header className="flex flex-row flex-nowrap justify-between align-center">
-            <h1 className="HeadingB">{title}</h1>
-            <span
-              className={`HeadingA tracked-mega ${accent}`}
+      <article className="section">
+        <div className="section-content">
+          <header>
+            <h1 className="heading--b section__title">{title}</h1>
+            <p
+              className={`text-xl section__number ${accent}`}
               aria-hidden="true"
             >
               0{index}
-            </span>
+            </p>
           </header>
-          <div className="flex flex-row flex-nowrap justify-center align-start">
-            {children}
-          </div>
+          <div>{children}</div>
         </div>
-      </section>
+      </article>
     );
   }
 }

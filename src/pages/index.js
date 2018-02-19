@@ -1,19 +1,16 @@
 import React from "react";
 import Section from "../partials/section";
 import Install from "../partials/install";
+import { Hero } from "../partials/hero";
 
 // Home page
 export default class Index extends React.Component {
   render() {
     return (
       <main>
-        <div className="Hero tc bg-navy pv6 ph1 mb5 flex flex-column flex-nowrap justify-center">
-          <div className="Hero-veil ba b--pink" />
-          <h1 className="HeadingA HeadingA--hero">Development Dashboards</h1>
-          <h2 className="HeadingB">by Formidable Open Source</h2>
-        </div>
+        <Hero />
         <Section title="Webpack Dashboard" accent="pink" index={1}>
-          <p className="mw9 order-2">
+          <p>
             A CLI dashboard for your webpack-dev-server, webpack-dashboard
             analyzes your production bundles and provides data on your module
             sizes, asset sizes, and more, right in your terminal.

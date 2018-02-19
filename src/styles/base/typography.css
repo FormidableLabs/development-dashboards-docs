@@ -1,75 +1,75 @@
-/*
+/*----------------------------------------
+  Heading A
+  ----------------------------------------*/
 
-   TYPOGRAPHY
-
-   "Flash of Faux Text"
-   Once custom fonts are loaded, a class gets added to `html`
-   custom heading fallbacks created with https://meowni.ca/font-style-matcher/
-
-*/
-/*
-    Default
-*/
-html:not(.exo-active) {
-  font-family: "Helvetica", sans-serif;
-  line-height: 2;
-}
-
-html.exo-active {
-  font-family: "Exo", sans-serif;
-  line-height: 2;
-}
-/*
-    HeadingA
-*/
-html:not(.lazer84-active) .HeadingA {
-  font-family: "Arial Black", "Impact", sans-serif;
-  letter-spacing: -0.075em;
-}
-
-html.lazer84-active .HeadingA {
+.heading--a {
   font-family: "lazer84", sans-serif;
-}
-
-.HeadingA {
-  font-size: var(--s6);
   font-style: italic;
   font-weight: normal;
   line-height: 1.2;
   text-transform: uppercase;
-  filter: drop-shadow(var(--s1) var(--s1) 0 var(--black));
+  filter: drop-shadow(0.5rem 0.5rem 0 var(--black));
 }
 
-.HeadingA--hero {
+.hero__title {
   background-image: linear-gradient(
     90deg,
-    var(--pink) 4%,
-    var(--orange) 28%,
-    var(--yellow) 47%,
-    var(--green) 72%,
-    var(--blue) 98%
+    var(--pink) 0%,
+    var(--orange) 20%,
+    var(--yellow) 40%,
+    var(--green) 60%,
+    var(--blue) 80%
   );
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  position: relative;
+  font-size: var(--fs2);
+  position: absolute;
+  text-indent: 1.5rem;
+  white-space: nowrap;
+  width: 150%;
+  left: -90px;
+  top: 40%;
 }
-/*
-    HeadingB
-*/
-html:not(.montserrat-active) .HeadingB {
-  font-family: "Helvetica", "Arial", sans-serif;
-  letter-spacing: 6px;
-}
-html.montserrat-active .HeadingB {
+
+/*----------------------------------------
+  Heading B
+  ----------------------------------------*/
+
+.heading--b {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 5px;
-}
-.HeadingB {
   display: block;
-  font-size: var(--s4);
+  font-size: var(--fs3);
   font-weight: 700;
   line-height: 1.5;
   text-transform: uppercase;
+}
+
+.hero__subtitle {
+  margin-top: 252px;
+  text-align: center;
+}
+
+/*----------------------------------------
+  Code
+  ----------------------------------------*/
+
+.text-xl {
+  font-family: "lazer84", sans-serif;
+  font-size: var(--fs1);
+  font-style: italic;
+  font-weight: normal;
+  filter: drop-shadow(0.5rem 0.5rem 0 var(--black));
+  letter-spacing: 1.1rem;
+  text-indent: 1.3rem;
+}
+
+/*----------------------------------------
+  Code
+  ----------------------------------------*/
+
+.code {
+  font-family: "Menlo", "Consolas", "Courier", monospace;
 }

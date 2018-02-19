@@ -1,0 +1,5 @@
+.layout-header {
+  background: var(--black);
+  height: 10rem;
+  padding: 2rem;
+}

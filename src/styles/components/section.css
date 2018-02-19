@@ -1,0 +1,23 @@
+.section {
+  background-image: linear-gradient(
+    41deg,
+    var(--dark-navy) 0%,
+    var(--light-navy) 64%
+  );
+  border-bottom: 1px solid color(var(--white) alpha(15%));
+  border-top: 1px solid color(var(--white) alpha(15%));
+  box-shadow: 0 6px 3px 0 var(--black);
+  margin-top: 4rem;
+}
+
+.section-content {
+  padding: 12rem 6rem;
+  margin: auto;
+  max-width: 86rem;
+}
+
+.section__number {
+  margin-bottom: 2rem;
+  margin-top: -6.5rem;
+  text-align: right;
+}
