@@ -11,6 +11,7 @@ ____________________________________________*/
 @import "./components/layout-header.css";
 @import "./components/hero.css";
 @import "./components/section.css";
+@import "./components/actions.css";
 
 /* Global Resets
 ____________________________________________*/
@@ -47,6 +48,10 @@ p {
 
 svg {
   fill: currentColor;
+}
+
+img {
+  max-width: 100%;
 }
 
 a:link {

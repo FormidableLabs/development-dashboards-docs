@@ -11,28 +11,6 @@
   filter: drop-shadow(0.5rem 0.5rem 0 var(--black));
 }
 
-.hero__title {
-  background-image: linear-gradient(
-    90deg,
-    var(--pink) 0%,
-    var(--orange) 20%,
-    var(--yellow) 40%,
-    var(--green) 60%,
-    var(--blue) 80%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  font-size: var(--fs2);
-  position: absolute;
-  text-indent: 1.5rem;
-  white-space: nowrap;
-  width: 150%;
-  left: -90px;
-  top: 40%;
-}
-
 /*----------------------------------------
   Heading B
   ----------------------------------------*/
@@ -47,13 +25,8 @@
   text-transform: uppercase;
 }
 
-.hero__subtitle {
-  margin-top: 252px;
-  text-align: center;
-}
-
 /*----------------------------------------
-  Code
+  Copy
   ----------------------------------------*/
 
 .text-xl {
@@ -66,10 +39,20 @@
   text-indent: 1.3rem;
 }
 
+.text-body {
+  color: var(--white);
+  font-family: "Exo", sans-serif;
+  font-size: var(--fs5);
+  font-weight: normal;
+  line-height: 2.2;
+}
+
 /*----------------------------------------
   Code
   ----------------------------------------*/
 
 .code {
+  background: #001a2b;
   font-family: "Menlo", "Consolas", "Courier", monospace;
+  font-size: 1.3rem;
 }

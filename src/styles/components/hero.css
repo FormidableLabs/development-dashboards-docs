@@ -1,9 +1,11 @@
 .hero {
   align-items: center;
-  /* background: url("../../../static/bg-space.png") no-repeat center; */
-  background: url(https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=2254&q=80)
-    no-repeat center;
-  background-size: cover;
+  /* background: url("../../../static/bg_space.png") no-repeat center; */
+  background-image: url("../../../static/bg_grid.png"),
+    url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=2254&q=80");
+  background-position: bottom -20vh center, center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, cover;
   border-bottom: 1px solid color(var(--white) alpha(15%));
   border-top: 1px solid color(var(--white) alpha(15%));
   box-shadow: 0 6px 3px 0 var(--black);
@@ -250,4 +252,31 @@
   left: -14px;
   position: absolute;
   width: calc(100% + 28px);
+}
+
+.hero__title {
+  background-image: linear-gradient(
+    90deg,
+    var(--pink) 0%,
+    var(--orange) 20%,
+    var(--yellow) 40%,
+    var(--green) 60%,
+    var(--blue) 80%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-size: var(--fs2);
+  position: absolute;
+  text-indent: 1.5rem;
+  white-space: nowrap;
+  width: 150%;
+  left: -90px;
+  top: 40%;
+}
+
+.hero__subtitle {
+  margin-top: 252px;
+  text-align: center;
 }

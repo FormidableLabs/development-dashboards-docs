@@ -1,0 +1,39 @@
+.actions {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0 0;
+}
+
+.actions__frame {
+  border: 1px solid var(--pink);
+  display: inline-block;
+  height: 6rem;
+  margin: 0 2rem;
+  padding: 8px;
+  width: 18rem;
+}
+
+.actions__button {
+  background: var(--pink7);
+  border: 1px solid var(--pink9);
+  color: var(--white);
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--fs5);
+  height: 4.2rem;
+  letter-spacing: 0.1em;
+  line-height: 4rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.actions__button:hover {
+  background: var(--pink9);
+}
+
+.actions__button:active {
+  background: var(--pink4);
+  transition: all 0s;
+}

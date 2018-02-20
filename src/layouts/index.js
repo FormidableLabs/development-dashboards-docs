@@ -23,7 +23,9 @@ class Layout extends React.Component {
           </a>
         </header>
         {children()}
-        <Footer theme="light" />
+        <div className="layout-footer">
+          <Footer theme="light" />
+        </div>
       </div>
     );
   }
