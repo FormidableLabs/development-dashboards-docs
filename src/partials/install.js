@@ -6,7 +6,7 @@ export default class Install extends React.Component {
   render() {
     const { accent, children, order } = this.props;
     return (
-      <div className={`code-frame order-${order}`}>
+      <div className={`code-frame order-${order} code--${accent}`}>
         <code className={`border--${accent} code`}>{children}</code>
       </div>
     );

@@ -4,12 +4,16 @@ import PropTypes from "prop-types";
 // Section
 export default class Section extends React.Component {
   render() {
-    const { accent, children, hero, index, title } = this.props;
+    const { accent, children, destination, hero, index, title } = this.props;
     return (
-      <article className="section">
+      <article className={`section ${destination}`}>
         <div className="section-content">
           <header>
-            <h1 className="heading--b section__title">{title}</h1>
+            <h1
+              className={`heading--b section__title section__title--${accent}`}
+            >
+              {title}
+            </h1>
             <p
               className={`text-xl section__number ${accent}`}
               aria-hidden="true"
@@ -30,6 +34,7 @@ export default class Section extends React.Component {
 Section.propTypes = {
   accent: PropTypes.string,
   children: PropTypes.node,
+  destination: PropTypes.string,
   hero: PropTypes.string,
   index: PropTypes.number,
   title: PropTypes.string

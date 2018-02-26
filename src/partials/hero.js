@@ -1,8 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-scroll";
+import arrowGif from "../../static/img/gif.gif";
 
-export const Hero = ({}) => (
-  <section className="hero">
+export const Hero = () => (
+  <section className="hero anchor1">
     <div className="frame">
       <div className="frame__edge1" />
       <div className="frame__edge2" />
@@ -18,12 +20,23 @@ export const Hero = ({}) => (
         <div className="frame__trapezoid" />
         <h1 className="heading--a hero__title">Development Dashboards</h1>
         <p className="heading--b hero__subtitle">by formidable open source</p>
-        <a className="button" href="#">
+        <Link
+          activeClass="active"
+          className="button"
+          duration={500}
+          hashSpy={true}
+          smooth={true}
+          spy={true}
+          to="anchor2"
+        >
           View Options
-        </a>
+        </Link>
       </div>
     </div>
+    {/* <img src={arrowGif} /> */}
   </section>
 );
 
-Hero.propTypes = {};
+Hero.propTypes = {
+  handleJumpClick: PropTypes.func
+};

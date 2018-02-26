@@ -1,0 +1,54 @@
+.cta-footer {
+  background-image: url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=2254&q=80");
+  background-size: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 4rem auto -2rem;
+  padding: 10rem 4rem;
+  text-align: center;
+}
+
+.cta-footer__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--fs3);
+  font-weight: normal;
+  letter-spacing: 3px;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+}
+
+.cta-footer__button {
+  border: 1px solid var(--pink);
+  display: inline-block;
+  height: 6rem;
+  margin: 0 auto;
+  max-width: 34rem;
+  padding: 8px;
+  text-decoration: none;
+  width: 100%;
+}
+
+.cta-footer__button span {
+  background: var(--pink7);
+  border: 1px solid var(--pink9);
+  color: var(--white);
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--fs5);
+  height: 4.2rem;
+  letter-spacing: 0.2em;
+  line-height: 4rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.cta-footer__button:hover span {
+  background: var(--pink9);
+}
+
+.cta-footer__button:active span {
+  background: var(--pink4);
+  transition: all 0s;
+}

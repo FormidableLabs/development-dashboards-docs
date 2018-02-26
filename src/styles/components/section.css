@@ -27,6 +27,8 @@
   border-style: solid;
   box-shadow: 0 2px 54px rgba(0, 0, 0, 7.6);
   margin: 4rem auto 5rem;
+  position: relative;
+  z-index: 19;
 }
 
 .section__hero::before,
@@ -41,26 +43,7 @@
 
 .section__hero img {
   position: relative;
-  z-index: 1;
-}
-
-.section__hero--pink {
-  border-color: var(--pink);
-  position: relative;
-}
-
-.section__hero--pink::after {
-  border-top: 6px solid var(--pink);
-  border-left: 6px solid var(--pink);
-  left: -6px;
-  top: -6px;
-}
-
-.section__hero--pink::before {
-  bottom: -6px;
-  border-bottom: 6px solid var(--pink);
-  border-right: 6px solid var(--pink);
-  right: -6px;
+  z-index: 9;
 }
 
 .section__content {
@@ -70,7 +53,8 @@
 }
 
 .section__copy,
-.code-frame {
+.code-frame,
+.section__button {
   flex: 1 0 0;
 }
 
@@ -78,10 +62,297 @@
   margin: 0 20px;
 }
 
+.section__copy::after,
+.section__copy::before {
+  border-style: solid;
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.section__copy::after {
+  height: 20rem;
+  top: -15.4rem;
+  width: 5rem;
+  z-index: 1;
+}
+
+.section__copy::before {
+  background: #022136;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  height: 1rem;
+  top: 4.1rem;
+  width: 1rem;
+  z-index: 2;
+}
+
+.section__copy--left::after {
+  border-width: 1px 0 1px 1px;
+  left: -5rem;
+}
+
+.section__copy--left::before {
+  left: -1rem;
+}
+
+.section__copy--right::after {
+  border-width: 1px 1px 1px 0;
+  right: -5rem;
+}
+
+.section__copy--right::before {
+  right: -1rem;
+}
+
+.section__copy--pink::after,
+.section__copy--pink::before {
+  border-color: var(--pink);
+}
+
+.section__copy--orange::after,
+.section__copy--orange::before {
+  border-color: var(--orange);
+}
+
+.section__copy--yellow::after,
+.section__copy--yellow::before {
+  border-color: var(--yellow);
+}
+
+.section__copy--green::after,
+.section__copy--green::before {
+  border-color: var(--green);
+}
+
 .code-frame {
   margin: 20px;
+  position: relative;
+  z-index: 9;
+}
+
+.code-frame code {
+  position: relative;
+  z-index: 9;
 }
 
 .order-1 {
   order: -1;
+}
+
+.code--pink::after {
+  border-color: var(--pink);
+}
+
+.code--orange::after {
+  border-color: var(--orange);
+}
+
+.code--yellow::after {
+  border-color: var(--yellow);
+}
+
+.code--green::after {
+  border-color: var(--green);
+}
+
+.code-frame::after,
+.code-frame.order-1::after {
+  border-style: solid;
+  content: "";
+  display: block;
+  height: 20rem;
+  position: absolute;
+  top: -19rem;
+  width: 20rem;
+  z-index: 1;
+}
+
+.code-frame::after {
+  border-width: 1px 1px 1px 0;
+  right: -7rem;
+}
+
+.code-frame.order-1::after {
+  border-width: 1px 0 1px 1px;
+  left: -7rem;
+}
+
+.section__title {
+  position: relative;
+}
+
+.section__title--pink::after,
+.section__title--pink::before {
+  border-color: var(--pink);
+}
+
+.section__title--orange::after,
+.section__title--orange::before {
+  border-color: var(--orange);
+}
+
+.section__title--yellow::after,
+.section__title--yellow::before {
+  border-color: var(--yellow);
+}
+
+.section__title--green::after,
+.section__title--green::before {
+  border-color: var(--green);
+}
+
+.section__title::after {
+  border-width: 1px 0 1px 1px;
+  border-style: solid;
+  content: "";
+  display: block;
+  height: 20rem;
+  left: -5rem;
+  position: absolute;
+  top: 1.6rem;
+  width: 5rem;
+  z-index: 1;
+}
+
+.section__title::before {
+  background: #022136;
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 10px 0 0 10px #022136;
+  content: "";
+  display: block;
+  height: 1rem;
+  left: -3rem;
+  position: absolute;
+  top: 1.2rem;
+  width: 1rem;
+  z-index: 4;
+}
+
+/* Button */
+
+.section__button {
+  background: #022136;
+  border: 1px solid var(--orange);
+  height: 6.4rem;
+  padding: 0.8rem;
+  position: relative;
+  z-index: 1;
+}
+
+.section__button::after {
+  border-color: var(--orange);
+  border-style: solid;
+  border-width: 1px 1px 1px 0;
+  content: "";
+  display: block;
+  height: 20rem;
+  position: absolute;
+  right: -7rem;
+  top: -16.8rem;
+  width: 7rem;
+  z-index: 5;
+}
+
+.section__button span {
+  background: var(--orange7);
+  border: 1px solid var(--orange9);
+  color: var(--white);
+  display: block;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--fs5);
+  height: 4.6rem;
+  letter-spacing: 0.1em;
+  line-height: 4.4rem;
+  outline: none;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.section__button span:hover {
+  background: var(--orange9);
+}
+
+.section__button span:active {
+  background: var(--orange4);
+  transition: all 0s;
+}
+
+.section__hero--pink::after,
+.section__hero--orange::after,
+.section__hero--yellow::after,
+.section__hero--green::after {
+  left: -6px;
+  top: -6px;
+}
+
+.section__hero--pink::before,
+.section__hero--orange::before,
+.section__hero--yellow::before,
+.section__hero--green::before {
+  bottom: -6px;
+  right: -6px;
+}
+
+/* Pink Variation */
+.section__hero--pink {
+  border-color: var(--pink);
+}
+
+.section__hero--pink::after {
+  border-top: 6px solid var(--pink);
+  border-left: 6px solid var(--pink);
+}
+
+.section__hero--pink::before {
+  border-bottom: 6px solid var(--pink);
+  border-right: 6px solid var(--pink);
+}
+
+/* Orange Variation */
+.section__hero--orange {
+  border-color: var(--orange);
+}
+
+.section__hero--orange::after {
+  border-top: 6px solid var(--orange);
+  border-left: 6px solid var(--orange);
+}
+
+.section__hero--orange::before {
+  border-bottom: 6px solid var(--orange);
+  border-right: 6px solid var(--orange);
+}
+
+/* Yellow Variation */
+.section__hero--yellow {
+  border-color: var(--yellow);
+}
+
+.section__hero--yellow::after {
+  border-top: 6px solid var(--yellow);
+  border-left: 6px solid var(--yellow);
+}
+
+.section__hero--yellow::before {
+  border-bottom: 6px solid var(--yellow);
+  border-right: 6px solid var(--yellow);
+}
+
+/* Green Variation */
+.section__hero--green {
+  border-color: var(--green);
+}
+
+.section__hero--green::after {
+  border-top: 6px solid var(--green);
+  border-left: 6px solid var(--green);
+}
+
+.section__hero--green::before {
+  border-bottom: 6px solid var(--green);
+  border-right: 6px solid var(--green);
 }

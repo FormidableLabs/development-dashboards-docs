@@ -12,6 +12,8 @@ ____________________________________________*/
 @import "./components/hero.css";
 @import "./components/section.css";
 @import "./components/actions.css";
+@import "./components/cta-footer.css";
+@import "./components/jump-nav.css";
 
 /* Global Resets
 ____________________________________________*/

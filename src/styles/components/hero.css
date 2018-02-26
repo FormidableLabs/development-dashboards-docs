@@ -210,26 +210,27 @@
 }
 
 .button {
-  background: var(--pink7);
   backface-visibility: hidden;
+  background: var(--pink7);
   border: 2px solid var(--pink);
   bottom: -80px;
   color: white;
+  cursor: pointer;
   display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--fs4);
   height: 70px;
   left: 0;
   letter-spacing: 3px;
   line-height: 66px;
   margin: auto;
   position: absolute;
+  right: 0;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  right: 0;
   transition: background 0.8s;
   width: calc(40% - 20px);
-  font-family: "Montserrat", sans-serif;
-  font-size: var(--fs4);
 }
 
 .button:hover {
