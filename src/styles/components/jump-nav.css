@@ -1,39 +1,51 @@
 .jump-nav {
   bottom: 0;
-  box-shadow: 11px 0px 0 -1rem var(--pink), 12px 20px 0 -1.9rem #f038b3,
-    12px -20px 0 -1.9rem #f038b3;
   height: 11.9rem;
   list-style: none;
   margin: auto;
-  padding-right: 3rem;
   position: fixed;
-  right: 40px;
+  right: 1rem;
   top: 0;
   z-index: 999;
 }
 
-.jump-nav:after,
-.jump-nav:before {
-  content: "";
-  display: block;
-  height: 12px;
-  position: absolute;
-  right: 0.3rem;
-  width: 8px;
+@media only screen and (min-width: 768px) {
+  .jump-nav {
+    box-shadow: 11px 0px 0 -1rem var(--pink), 12px 20px 0 -1.9rem #f038b3,
+      12px -20px 0 -1.9rem #f038b3;
+    padding-right: 3rem;
+    right: 2rem;
+  }
+
+  .jump-nav:after,
+  .jump-nav:before {
+    content: "";
+    display: block;
+    height: 12px;
+    position: absolute;
+    right: 0.3rem;
+    width: 8px;
+  }
+
+  .jump-nav:after {
+    border-left: 1px solid var(--pink);
+    border-right: 1px solid var(--pink);
+    bottom: -0.1rem;
+    transform: skew(-35deg);
+  }
+
+  .jump-nav:before {
+    border-left: 1px solid var(--pink);
+    border-right: 1px solid var(--pink);
+    transform: skew(35deg);
+    top: -0.1rem;
+  }
 }
 
-.jump-nav:after {
-  border-left: 1px solid var(--pink);
-  border-right: 1px solid var(--pink);
-  bottom: -0.1rem;
-  transform: skew(-35deg);
-}
-
-.jump-nav:before {
-  border-left: 1px solid var(--pink);
-  border-right: 1px solid var(--pink);
-  transform: skew(35deg);
-  top: -0.1rem;
+@media only screen and (min-width: 1366px) {
+  .jump-nav {
+    right: 4rem;
+  }
 }
 
 .jump-nav ul {

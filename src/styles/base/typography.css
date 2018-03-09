@@ -3,12 +3,34 @@
   ----------------------------------------*/
 
 .heading--a {
+  background-image: linear-gradient(
+    90deg,
+    var(--pink) 0%,
+    var(--orange) 20%,
+    var(--yellow) 40%,
+    var(--green) 60%,
+    var(--blue) 80%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0.1rem 0.1rem 0 var(--black));
   font-family: "lazer84", sans-serif;
   font-style: italic;
   font-weight: normal;
+  font-size: var(--fs4);
   line-height: 1.2;
   text-transform: uppercase;
-  filter: drop-shadow(0.5rem 0.5rem 0 var(--black));
+  white-space: nowrap;
+}
+
+@media only screen and (min-width: 678px) {
+  .heading--a {
+    filter: drop-shadow(0.5rem 0.5rem 0 var(--black));
+    font-size: var(--fs2);
+    text-indent: 1.5rem;
+  }
 }
 
 /*----------------------------------------
@@ -17,12 +39,19 @@
 
 .heading--b {
   font-family: "Montserrat", sans-serif;
-  letter-spacing: 5px;
+  letter-spacing: 1px;
   display: block;
-  font-size: var(--fs3);
+  font-size: var(--fs6);
   font-weight: 700;
   line-height: 1.5;
   text-transform: uppercase;
+}
+
+@media only screen and (min-width: 678px) {
+  .heading--b {
+    font-size: var(--fs3);
+    letter-spacing: 5px;
+  }
 }
 
 /*----------------------------------------
