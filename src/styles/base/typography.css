@@ -19,13 +19,21 @@
   font-family: "lazer84", sans-serif;
   font-style: italic;
   font-weight: normal;
-  font-size: var(--fs4);
+  font-size: 2rem;
   line-height: 1.2;
   text-transform: uppercase;
   white-space: nowrap;
 }
 
-@media only screen and (min-width: 678px) {
+@media only screen and (min-width: 768px) {
+  .heading--a {
+    filter: drop-shadow(0.3rem 0.3rem 0 var(--black));
+    font-size: 5rem;
+    text-indent: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
   .heading--a {
     filter: drop-shadow(0.5rem 0.5rem 0 var(--black));
     font-size: var(--fs2);
@@ -47,10 +55,14 @@
   text-transform: uppercase;
 }
 
-@media only screen and (min-width: 678px) {
+@media only screen and (min-width: 768px) {
   .heading--b {
     font-size: var(--fs3);
     letter-spacing: 5px;
+  }
+
+  .section .heading--b {
+    padding-right: 13rem;
   }
 }
 
@@ -60,12 +72,12 @@
 
 .text-xl {
   font-family: "lazer84", sans-serif;
-  font-size: var(--fs1);
+  font-size: var(--fs3);
   font-style: italic;
   font-weight: normal;
-  filter: drop-shadow(0.5rem 0.5rem 0 var(--black));
-  letter-spacing: 1.1rem;
-  text-indent: 1.3rem;
+  filter: drop-shadow(0.2rem 0.2rem 0 var(--black));
+  letter-spacing: 0.2rem;
+  text-indent: 0.5rem;
 }
 
 .text-body {
@@ -76,6 +88,15 @@
   line-height: 2.2;
 }
 
+@media only screen and (min-width: 768px) {
+  .text-xl {
+    font-size: var(--fs1);
+    filter: drop-shadow(0.5rem 0.5rem 0 var(--black));
+    letter-spacing: 1.1rem;
+    text-indent: 1.3rem;
+  }
+}
+
 /*----------------------------------------
   Code
   ----------------------------------------*/
@@ -83,5 +104,11 @@
 .code {
   background: #001a2b;
   font-family: "Menlo", "Consolas", "Courier", monospace;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .code {
+    font-size: 1.3rem;
+  }
 }

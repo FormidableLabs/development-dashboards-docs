@@ -4,17 +4,16 @@
   list-style: none;
   margin: auto;
   position: fixed;
-  right: 1rem;
+  right: 2rem;
   top: 0;
   z-index: 999;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .jump-nav {
     box-shadow: 11px 0px 0 -1rem var(--pink), 12px 20px 0 -1.9rem #f038b3,
       12px -20px 0 -1.9rem #f038b3;
     padding-right: 3rem;
-    right: 2rem;
   }
 
   .jump-nav:after,
@@ -127,24 +126,26 @@
   opacity: 1;
 }
 
-.jump-nav ul li:nth-child(1) .active {
-  color: var(--blue);
-}
+@media only screen and (min-width: 1366px) {
+  .jump-nav ul li:nth-child(1) .active {
+    color: var(--blue);
+  }
 
-.jump-nav ul li:nth-child(2) .active {
-  color: var(--pink);
-}
+  .jump-nav ul li:nth-child(2) .active {
+    color: var(--pink);
+  }
 
-.jump-nav ul li:nth-child(3) .active {
-  color: var(--orange);
-}
+  .jump-nav ul li:nth-child(3) .active {
+    color: var(--orange);
+  }
 
-.jump-nav ul li:nth-child(4) .active {
-  color: var(--yellow);
-}
+  .jump-nav ul li:nth-child(4) .active {
+    color: var(--yellow);
+  }
 
-.jump-nav ul li:nth-child(5) .active {
-  color: var(--green);
+  .jump-nav ul li:nth-child(5) .active {
+    color: var(--green);
+  }
 }
 
 .jump-nav ul li:nth-child(1) a::after {
