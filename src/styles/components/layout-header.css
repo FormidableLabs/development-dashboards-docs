@@ -1,0 +1,11 @@
+.layout-header {
+  background: var(--black);
+  height: 10rem;
+  padding: 2rem;
+}
+
+.layout-footer {
+  background-color: var(--white);
+  padding: 0 4rem;
+  width: 100%;
+}

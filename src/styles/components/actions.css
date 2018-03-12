@@ -1,0 +1,114 @@
+.actions {
+  padding: 4rem 0 0;
+}
+
+.actions__frame {
+  border: 1px solid var(--pink);
+  display: inline-block;
+  height: 6rem;
+  padding: 8px;
+  width: 100%;
+}
+
+.actions__button {
+  color: var(--white);
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--fs5);
+  height: 4.2rem;
+  letter-spacing: 0.15em;
+  line-height: 4rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+@media only screen and (min-width: 768px) {
+  .actions {
+    display: flex;
+    justify-content: center;
+  }
+
+  .actions__frame {
+    display: block;
+    margin: 0 2rem;
+    width: 18rem;
+  }
+}
+
+/* Pink Variation */
+.button--pink {
+  border: 1px solid var(--pink);
+}
+
+.button--pink a {
+  background: var(--pink7);
+  border: 1px solid var(--pink9);
+}
+
+.button--pink:hover a {
+  background: var(--pink9);
+}
+
+.button--pink:active a {
+  background: var(--pink4);
+  transition: all 0s;
+}
+
+/* Orange Variation */
+.button--orange {
+  border: 1px solid var(--orange);
+}
+
+.button--orange a {
+  background: var(--orange7);
+  border: 1px solid var(--orange9);
+}
+
+.button--orange:hover a {
+  background: var(--orange9);
+}
+
+.button--orange:active a {
+  background: var(--orange4);
+  transition: all 0s;
+}
+
+/* Yellow Variation */
+.button--yellow {
+  border: 1px solid var(--yellow);
+}
+
+.button--yellow a {
+  background: var(--yellow7);
+  border: 1px solid var(--yellow9);
+}
+
+.button--yellow:hover a {
+  background: var(--yellow9);
+}
+
+.button--yellow:active a {
+  background: var(--yellow4);
+  transition: all 0s;
+}
+
+/* Green Variation */
+.button--green {
+  border: 1px solid var(--green);
+}
+
+.button--green a {
+  background: var(--green7);
+  border: 1px solid var(--green9);
+}
+
+.button--green:hover a {
+  background: var(--green9);
+}
+
+.button--green:active a {
+  background: var(--green4);
+  transition: all 0s;
+}

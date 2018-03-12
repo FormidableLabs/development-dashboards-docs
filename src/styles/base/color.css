@@ -1,0 +1,61 @@
+/* Color */
+
+.blue {
+  color: var(--blue);
+}
+
+.pink {
+  color: var(--pink);
+}
+
+.orange {
+  color: var(--orange);
+}
+
+.yellow {
+  color: var(--yellow);
+}
+
+.green {
+  color: var(--green);
+}
+
+/* Border Color */
+
+.border--blue,
+.border--pink,
+.border--orange,
+.border--yellow,
+.border--green {
+  padding: 1.2rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .border--blue,
+  .border--pink,
+  .border--orange,
+  .border--yellow,
+  .border--green {
+    padding: 1.2rem 3rem;
+  }
+}
+
+.border--blue {
+  border: 1px solid var(--blue);
+}
+
+.border--pink {
+  border: 1px solid var(--pink);
+}
+
+.border--orange {
+  border: 1px solid var(--orange);
+}
+
+.border--yellow {
+  border: 1px solid var(--yellow);
+}
+
+.border--green {
+  border: 1px solid var(--green);
+}
