@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-scroll";
-import arrowGif from "../../static/img/gif.gif";
 
 export const Hero = () => (
   <section className="hero anchor1">
@@ -24,16 +23,15 @@ export const Hero = () => (
           activeClass="active"
           className="button"
           duration={500}
-          hashSpy={true}
-          smooth={true}
-          spy={true}
+          hashSpy
+          smooth
+          spy
           to="anchor2"
         >
           View Options
         </Link>
       </div>
     </div>
-    {/* <img src={arrowGif} /> */}
   </section>
 );
 

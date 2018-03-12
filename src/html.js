@@ -5,6 +5,7 @@ import lazer84woff from "../static/fonts/lazer84.woff";
 import lazer84woff2 from "../static/fonts/lazer84.woff2";
 
 let stylesStr;
+
 if (process.env.NODE_ENV === "production") {
   try {
     // eslint-disable-next-line import/no-webpack-loader-syntax

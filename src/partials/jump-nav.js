@@ -9,9 +9,9 @@ export const JumpNav = () => (
         <Link
           activeClass="active"
           duration={500}
-          hashSpy={true}
-          smooth={true}
-          spy={true}
+          hashSpy
+          smooth
+          spy
           to="anchor1"
         >
           Home
@@ -21,9 +21,9 @@ export const JumpNav = () => (
         <Link
           activeClass="active"
           duration={500}
-          hashSpy={true}
-          smooth={true}
-          spy={true}
+          hashSpy
+          smooth
+          spy
           to="anchor2"
         >
           Webpack
@@ -33,9 +33,9 @@ export const JumpNav = () => (
         <Link
           activeClass="active"
           duration={500}
-          hashSpy={true}
-          smooth={true}
-          spy={true}
+          hashSpy
+          smooth
+          spy
           to="anchor3"
         >
           Electron
@@ -45,9 +45,9 @@ export const JumpNav = () => (
         <Link
           activeClass="active"
           duration={500}
-          hashSpy={true}
-          smooth={true}
-          spy={true}
+          hashSpy
+          smooth
+          spy
           to="anchor4"
         >
           InspectPack
@@ -57,9 +57,9 @@ export const JumpNav = () => (
         <Link
           activeClass="active"
           duration={500}
-          hashSpy={true}
-          smooth={true}
-          spy={true}
+          hashSpy
+          smooth
+          spy
           to="anchor5"
         >
           NodeJs

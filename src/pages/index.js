@@ -6,7 +6,6 @@ import WPDashImg from "../../static/img/product_webpack-dashboard.png";
 import WPEDashImg from "../../static/img/product_webpack-electron-dashboard.jpg";
 import InspectPackImg from "../../static/img/product_inspectpack.jpg";
 import NodeDashImg from "../../static/img/product_nodejs-dashboard.png";
-import smoothScroll from "smoothscroll";
 import { Actions } from "../partials/actions";
 import { CtaFooter } from "../partials/cta-footer";
 import { Hero } from "../partials/hero";
@@ -17,7 +16,7 @@ export default class Index extends Component {
     return (
       <main>
         <JumpNav />
-        <Hero handleJumpClick={e => this.handleJumpClick(e, "2")} />
+        <Hero handleJumpClick={(e) => this.handleJumpClick(e, "2")} />
         <Section
           accent="pink"
           destination="anchor2"

@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import FontFaceObserver from "fontfaceobserver";
 import { Footer } from "formidable-landers";
 import config from "../../data/site-config";
 import FORMIDABLELOGO from "../../static/logos/formidable.svg";
