@@ -199,25 +199,6 @@
   margin: 1rem auto 2rem;
 }
 
-.button {
-  background: var(--pink7);
-  border: 2px solid var(--pink);
-  color: white;
-  cursor: pointer;
-  display: block;
-  font-family: "Montserrat", sans-serif;
-  font-size: var(--fs5);
-  height: 44px;
-  letter-spacing: 1px;
-  line-height: 42px;
-  margin: auto;
-  max-width: 26rem;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  width: 100%;
-}
-
 @media only screen and (min-width: 768px) {
   .hero__title {
     left: 50%;
@@ -233,54 +214,16 @@
     margin-top: 252px;
     text-align: center;
   }
-
-  .button {
-    backface-visibility: hidden;
-    bottom: -80px;
-    font-size: var(--fs4);
-    height: 70px;
-    left: 0;
-    letter-spacing: 3px;
-    line-height: 66px;
-    margin-top: 2rem;
-    max-width: none;
-    position: absolute;
-    right: 0;
-    transition: background 0.8s;
-    width: calc(80% - 20px);
-  }
 }
 
-@media only screen and (min-width: 1024px) {
+@media (--medium-viewport) {
   .hero__title {
     top: 40%;
     width: 112rem;
   }
 }
 
-.button:hover {
-  background: var(--pink9);
-}
-
-.button:active {
-  background: var(--pink4);
-  transition: background 0s;
-}
-
 @media only screen and (min-width: 768px) {
-  .button:after {
-    border-bottom: 1px solid var(--pink);
-    border-left: 1px solid var(--pink);
-    border-right: 1px solid var(--pink);
-    bottom: -14px;
-    content: "";
-    display: block;
-    height: 43px;
-    left: -14px;
-    position: absolute;
-    width: calc(100% + 28px);
-  }
-
   .hero {
     padding-left: 8rem;
     padding-right: 8rem;
