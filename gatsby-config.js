@@ -25,6 +25,13 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "styles",
+        path: `${__dirname}/src/styles/`
+      }
+    },
+    {
       resolve: "gatsby-plugin-postcss-sass",
       options: {
         postCssPlugins: [
