@@ -1,22 +1,51 @@
-/* Base
-____________________________________________*/
+/*
+  This CSS follows BEM naming conventions. http://getbem.com/introduction/
+  
+  Naming Style
+    .component
+    .component--modifier
+    .component__children
+  
+  Example
+    .header          // Base header
+    .header--pink    // Modifier for header 
+    .header__title   // Title inside of header
+
+  Usage 
+    <header className="header header--pink">
+      <h1 className="header__title">Header Title</h1>
+    </header> 
+*/
+
+/* 
+    Base
+*/
 @import "../../node_modules/normalize.css";
 @import "./base/variables.css";
 @import "./base/fonts.css";
 @import "./base/typography.css";
 @import "./base/color.css";
+@import "./base/button.css";
 
-/* Components
-____________________________________________*/
-@import "./components/layout-header.css";
-@import "./components/hero.css";
-@import "./components/section.css";
+/*
+    Layouts 
+    Corresponds to `src/layouts/*.js`
+*/
+@import "./layouts/index.css";
+
+/* 
+    Components
+    Corresponds to `src/partials/*.js`
+*/
 @import "./components/actions.css";
 @import "./components/cta-footer.css";
+@import "./components/hero.css";
 @import "./components/jump-nav.css";
+@import "./components/section.css";
 
-/* Global Resets
-____________________________________________*/
+/* 
+  Global
+*/
 *,
 *:after,
 *:before {
@@ -32,9 +61,6 @@ html {
 
 body {
   font-size: var(--base);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizelegibility;
   -webkit-overflow-scrolling: touch;
 }
 
