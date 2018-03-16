@@ -107,7 +107,7 @@
   font-size: 1.2rem;
 }
 
-@media only screen and (min-width: 1024px) {
+@media (--medium-viewport) {
   .code {
     font-size: 1.3rem;
   }

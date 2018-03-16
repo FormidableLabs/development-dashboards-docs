@@ -37,3 +37,5 @@
   --fs6: 1.3rem;
   --fs7: 1rem;
 }
+
+@custom-media --medium-viewport only screen and (min-width: 1024px);

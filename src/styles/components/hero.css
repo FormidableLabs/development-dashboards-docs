@@ -248,7 +248,7 @@
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media (--medium-viewport) {
   .frame__dot1,
   .frame__dot2,
   .frame__dot4,
