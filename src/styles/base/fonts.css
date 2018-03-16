@@ -5,3 +5,11 @@
   font-weight: normal;
   font-style: italic;
 }
+
+@font-face {
+  font-family: "exo";
+  src: url("../../../static/fonts/exo2.woff2") format("woff2"),
+    url("../../../static/fonts/exo2.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
