@@ -1,4 +1,5 @@
 /*
+
    TYPOGRAPHY
    "Flash of Faux Text"
    Once custom fonts are loaded, a class gets added to `html`
@@ -25,10 +26,6 @@ html.exo-active .text-body {
 /*
     Headings 
 */
-
-.heading {
-  text-transform: uppercase;
-}
 
 // Heading Alpha
 html:not(.lazer84-active) .heading--a {
@@ -94,6 +91,7 @@ html.montserrat-active .heading--b {
   font-size: var(--fs6);
   font-weight: 700;
   line-height: 1.5;
+  text-transform: uppercase;
 }
 
 @media only screen and (min-width: 768px) {

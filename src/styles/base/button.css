@@ -1,5 +1,5 @@
 .button {
-  background: var(--pink70);
+  background: var(--pink7);
   border: 2px solid var(--pink);
   color: white;
   cursor: pointer;
@@ -18,11 +18,11 @@
 }
 
 .button:hover {
-  background: var(--pink90);
+  background: var(--pink9);
 }
 
 .button:active {
-  background: var(--pink40);
+  background: var(--pink4);
   transition: background 0s;
 }
 
@@ -62,16 +62,16 @@
 }
 
 .button--pink a {
-  background: var(--pink70);
-  border: 1px solid var(--pink90);
+  background: var(--pink7);
+  border: 1px solid var(--pink9);
 }
 
 .button--pink:hover a {
-  background: var(--pink90);
+  background: var(--pink9);
 }
 
 .button--pink:active a {
-  background: var(--pink40);
+  background: var(--pink4);
   transition: all 0s;
 }
 
