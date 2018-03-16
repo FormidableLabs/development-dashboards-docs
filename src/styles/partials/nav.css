@@ -1,0 +1,14 @@
+.nav {
+  border: 1px solid red;
+
+  position: fixed;
+  top: 0;
+  right: var(--s5);
+  bottom: 0;
+
+  z-index: var(--z-increment);
+}
+
+.nav__list {
+  list-style: none;
+}

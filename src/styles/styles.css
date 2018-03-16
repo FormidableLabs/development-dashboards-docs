@@ -15,6 +15,25 @@
 @import "./base/typography.css";
 /**
 
+  PARTIALS
+  Styles corresponding to `src/partials/*.js`
+  These rules follow BEM naming conventions. http://getbem.com/introduction/
+
+  Naming Style
+    .component
+    .component--modifier
+    .component__children
+
+  Example
+    .header          // Base header
+    .header--pink    // Modifier for header 
+    .header__title   // Title inside of header
+
+*/
+@import "./partials/nav.css";
+
+/**
+
   COMPONENTS
   functional classes based on http://tachyons.io/
 
@@ -28,6 +47,7 @@
 @import "./components/borders.css";
 @import "./components/colors.css";
 @import "./components/flex.css";
+@import "./components/height.css";
 @import "./components/spacing.css";
 @import "./components/text.css";
 
@@ -115,44 +135,6 @@ a:visited {
   font-family: "Menlo", "Consolas", "Courier", monospace;
 }
 
-/*
-
-   HEIGHTS
-
-*/
-.h1 {
-  height: var(--s1);
-}
-.h2 {
-  height: var(--s2);
-}
-.h3 {
-  height: var(--s3);
-}
-.h4 {
-  height: var(--s4);
-}
-.h5 {
-  height: var(--s5);
-}
-.h6 {
-  height: var(--s6);
-}
-.h7 {
-  height: var(--s7);
-}
-.h8 {
-  height: var(--s8);
-}
-.h9 {
-  height: var(--s9);
-}
-.h10 {
-  height: var(--s10);
-}
-.h11 {
-  height: var(--s11);
-}
 /*
 
    MAX WIDTHS

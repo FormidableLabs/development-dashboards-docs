@@ -1,0 +1,38 @@
+/*
+
+   HEIGHTS
+
+*/
+.h1 {
+  height: var(--s1);
+}
+.h2 {
+  height: var(--s2);
+}
+.h3 {
+  height: var(--s3);
+}
+.h4 {
+  height: var(--s4);
+}
+.h5 {
+  height: var(--s5);
+}
+.h6 {
+  height: var(--s6);
+}
+.h7 {
+  height: var(--s7);
+}
+.h8 {
+  height: var(--s8);
+}
+.h9 {
+  height: var(--s9);
+}
+.h10 {
+  height: var(--s10);
+}
+.h11 {
+  height: var(--s11);
+}
