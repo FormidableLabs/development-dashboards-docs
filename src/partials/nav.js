@@ -10,10 +10,11 @@ export default class Nav extends React.Component {
 
   render() {
     return (
-      <nav className="jump-nav">
-        <ul>
-          <li>
+      <nav className="nav">
+        <ul className="nav__list">
+          <li className="nav__list__item">
             <Link
+              className="nav__link"
               activeClass="active"
               duration={500}
               hashSpy
@@ -24,8 +25,9 @@ export default class Nav extends React.Component {
               Home
             </Link>
           </li>
-          <li>
+          <li className="nav__list__item">
             <Link
+              className="nav__link"
               activeClass="active"
               duration={500}
               hashSpy
@@ -36,8 +38,9 @@ export default class Nav extends React.Component {
               Webpack
             </Link>
           </li>
-          <li>
+          <li className="nav__list__item">
             <Link
+              className="nav__link"
               activeClass="active"
               duration={500}
               hashSpy
@@ -48,8 +51,9 @@ export default class Nav extends React.Component {
               Electron
             </Link>
           </li>
-          <li>
+          <li className="nav__list__item">
             <Link
+              className="nav__link"
               activeClass="active"
               duration={500}
               hashSpy
@@ -60,8 +64,9 @@ export default class Nav extends React.Component {
               InspectPack
             </Link>
           </li>
-          <li>
+          <li className="nav__list__item">
             <Link
+              className="nav__link"
               activeClass="active"
               duration={500}
               hashSpy
