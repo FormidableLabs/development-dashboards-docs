@@ -1,6 +1,41 @@
-/*----------------------------------------
-  Heading A
-  ----------------------------------------*/
+/*
+
+   TYPOGRAPHY
+   "Flash of Faux Text"
+   Once custom fonts are loaded, a class gets added to `html`
+   custom heading fallbacks created with https://meowni.ca/font-style-matcher/
+
+*/
+
+html:not(.exo-active) .text-body {
+  font-family: "Helvetica", sans-serif;
+  line-height: 2;
+}
+
+html.exo-active .text-body {
+  font-family: "Exo", sans-serif;
+  line-height: 2;
+}
+
+.text-body {
+  color: var(--white);
+  font-size: var(--fs5);
+  font-weight: normal;
+}
+
+/*
+    Headings 
+*/
+
+// Heading Alpha
+html:not(.lazer84-active) .heading--a {
+  font-family: "Arial Black", "Impact", sans-serif;
+  letter-spacing: -0.075em;
+}
+
+html.lazer84-active .heading--a {
+  font-family: "lazer84", sans-serif;
+}
 
 .heading--a {
   background-image: linear-gradient(
@@ -16,10 +51,9 @@
   color: transparent;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0.1rem 0.1rem 0 var(--black));
-  font-family: "lazer84", sans-serif;
+  font-size: 2rem;
   font-style: italic;
   font-weight: normal;
-  font-size: 2rem;
   line-height: 1.2;
   text-transform: uppercase;
   white-space: nowrap;
@@ -41,14 +75,19 @@
   }
 }
 
-/*----------------------------------------
-  Heading B
-  ----------------------------------------*/
+// Heading Beta
+html:not(.montserrat-active) .heading--b {
+  font-family: "Helvetica", "Arial", sans-serif;
+  letter-spacing: 6px;
+}
+html.montserrat-active .heading--b {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 5px;
+}
 
 .heading--b {
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 1px;
   display: block;
+  font-family: "Montserrat", sans-serif;
   font-size: var(--fs6);
   font-weight: 700;
   line-height: 1.5;
@@ -80,14 +119,6 @@
   text-indent: 0.5rem;
 }
 
-.text-body {
-  color: var(--white);
-  font-family: "Exo", sans-serif;
-  font-size: var(--fs5);
-  font-weight: normal;
-  line-height: 2.2;
-}
-
 @media only screen and (min-width: 768px) {
   .text-xl {
     font-size: var(--fs1);
@@ -107,7 +138,7 @@
   font-size: 1.2rem;
 }
 
-@media only screen and (min-width: 1024px) {
+@media (--medium-viewport) {
   .code {
     font-size: 1.3rem;
   }

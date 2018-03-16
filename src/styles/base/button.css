@@ -1,0 +1,133 @@
+.button {
+  background: var(--pink7);
+  border: 2px solid var(--pink);
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--fs5);
+  height: 44px;
+  letter-spacing: 1px;
+  line-height: 42px;
+  margin: auto;
+  max-width: 26rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.button:hover {
+  background: var(--pink9);
+}
+
+.button:active {
+  background: var(--pink4);
+  transition: background 0s;
+}
+
+@media only screen and (min-width: 768px) {
+  .button {
+    backface-visibility: hidden;
+    bottom: -80px;
+    font-size: var(--fs4);
+    height: 70px;
+    left: 0;
+    letter-spacing: 3px;
+    line-height: 66px;
+    margin-top: 2rem;
+    max-width: none;
+    position: absolute;
+    right: 0;
+    transition: background 0.8s;
+    width: calc(80% - 20px);
+  }
+  .button:after {
+    border-bottom: 1px solid var(--pink);
+    border-left: 1px solid var(--pink);
+    border-right: 1px solid var(--pink);
+    bottom: -14px;
+    content: "";
+    display: block;
+    height: 43px;
+    left: -14px;
+    position: absolute;
+    width: calc(100% + 28px);
+  }
+}
+
+/* Pink Variation */
+.button--pink {
+  border: 1px solid var(--pink);
+}
+
+.button--pink a {
+  background: var(--pink7);
+  border: 1px solid var(--pink9);
+}
+
+.button--pink:hover a {
+  background: var(--pink9);
+}
+
+.button--pink:active a {
+  background: var(--pink4);
+  transition: all 0s;
+}
+
+/* Orange Variation */
+.button--orange {
+  border: 1px solid var(--orange);
+}
+
+.button--orange a {
+  background: var(--orange7);
+  border: 1px solid var(--orange9);
+}
+
+.button--orange:hover a {
+  background: var(--orange9);
+}
+
+.button--orange:active a {
+  background: var(--orange4);
+  transition: all 0s;
+}
+
+/* Yellow Variation */
+.button--yellow {
+  border: 1px solid var(--yellow);
+}
+
+.button--yellow a {
+  background: var(--yellow7);
+  border: 1px solid var(--yellow9);
+}
+
+.button--yellow:hover a {
+  background: var(--yellow9);
+}
+
+.button--yellow:active a {
+  background: var(--yellow4);
+  transition: all 0s;
+}
+
+/* Green Variation */
+.button--green {
+  border: 1px solid var(--green);
+}
+
+.button--green a {
+  background: var(--green7);
+  border: 1px solid var(--green9);
+}
+
+.button--green:hover a {
+  background: var(--green9);
+}
+
+.button--green:active a {
+  background: var(--green4);
+  transition: all 0s;
+}

@@ -9,7 +9,7 @@
   z-index: 999;
 }
 
-@media only screen and (min-width: 1024px) {
+@media (--medium-viewport) {
   .jump-nav {
     box-shadow: 11px 0px 0 -1rem var(--pink), 12px 20px 0 -1.9rem #f038b3,
       12px -20px 0 -1.9rem #f038b3;
