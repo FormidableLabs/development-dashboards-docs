@@ -1,6 +1,7 @@
 import React from "react";
 import Section from "../partials/section";
 import Install from "../partials/install";
+import Nav from "../partials/nav";
 
 // Home page
 export default class Index extends React.Component {
@@ -53,6 +54,7 @@ export default class Index extends React.Component {
             npm install -g nodejs-dashboard
           </Install>
         </Section>
+        <Nav />
       </main>
     );
   }
