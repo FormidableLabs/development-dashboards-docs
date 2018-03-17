@@ -24,27 +24,17 @@ module.exports = {
         path: `${__dirname}/src/pages/`
       }
     },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "styles",
-        path: `${__dirname}/src/styles/`
-      }
-    },
-    {
-      resolve: "gatsby-plugin-postcss-sass",
-      options: {
-        postCssPlugins: [
-          require("postcss-import")(),
-          require("postcss-url")({ url: "inline" }),
-          require("postcss-cssnext")(),
-          // Add plugins here:
-          require("postcss-inline-svg")(),
-          require("postcss-browser-reporter"),
-          require("postcss-reporter")
-        ]
-      }
-    },
+    // Enable for formidable-landers, but disabled now so all CSS will re-compile
+    // {
+    //   resolve: "gatsby-plugin-postcss-sass",
+    //   options: {
+    //     postCssPlugins: [
+    //       require("postcss-import")(),
+    //       require("postcss-url")({ url: "inline" }),
+    //       require("postcss-cssnext")()
+    //     ]
+    //   }
+    // },
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
