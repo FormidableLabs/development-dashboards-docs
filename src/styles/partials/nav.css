@@ -1,7 +1,9 @@
 .nav {
   position: fixed;
   top: 25vh;
-  right: var(--s5);
+  right: var(--s3);
+
+  padding: var(--s3) var(--s5) var(--s3) var(--s3);
 
   z-index: var(--z-increment);
 }
@@ -9,7 +11,6 @@
 .nav__list {
   margin: 0;
   padding: 0;
-  position: relative;
 
   list-style: none;
 }
@@ -17,11 +18,14 @@
 .nav__list__item {
   margin-top: var(--s5);
   padding: var(--s2);
+  position: relative;
+}
+
+.nav__list__item:first-child {
+  margin-top: 0;
 }
 
 .nav__link {
-  position: relative;
-
   cursor: pointer;
   display: block;
 
@@ -32,15 +36,18 @@
 }
 
 /* Circle/Dot */
+:root {
+  --nav-dot-spacing: calc(0.5 * var(--s3));
+}
 .nav__link:after {
   content: " ";
   position: absolute;
-  top: 0;
-  right: 0;
+  top: calc(-1 * var(--nav-dot-spacing));
+  left: calc(-1 * var(--nav-dot-spacing));
 
   height: var(--s3);
   /* Padding the space between border and dot */
-  padding: calc(0.5 * var(--s3));
+  padding: var(--nav-dot-spacing);
   width: var(--s3);
 
   background-color: var(--white);
@@ -85,50 +92,53 @@
 
 /*
     Decorative Lines 
+*/
+:root {
+  --nav-decor-height: var(--s3);
+  --nav-decor-width: var(--s2);
+}
+.nav {
+  &:after,
+  &:before {
+    content: " ";
+    position: absolute;
+    right: 0;
 
-@media (--large-viewport) {
-  .nav {
-    box-shadow: 11px 0px 0 -1rem var(--pink), 12px 20px 0 -1.9rem var(--pink),
-      12px -20px 0 -1.9rem var(--pink);
-
-    &:after,
-    &:before {
-      content: "";
-      display: block;
-      height: 12px;
-      position: absolute;
-      right: 0.3rem;
-      width: 8px;
-    }
-
-    &:after {
-      border-left: 1px solid var(--pink);
-      border-right: 1px solid var(--pink);
-      bottom: -0.1rem;
-      transform: skew(-35deg);
-    }
-
-    &:before {
-      border-left: 1px solid var(--pink);
-      border-right: 1px solid var(--pink);
-      transform: skew(35deg);
-      top: -0.1rem;
-    }
+    height: var(--nav-decor-height);
+    width: var(--nav-decor-width);
   }
 
-  .nav__list:after {
-    content: "";
+  &:after {
+    bottom: 0;
 
-    position: absolute;
-    top: var(--s5);
-    right: calc(-1 * var(--s4));
+    transform: skew(-35deg);
+    transform-origin: top right;
 
-    height: var(--s7);
-    width: 1px;
+    border-left: 1px solid var(--pink);
+    border-right: 1px solid var(--pink);
+  }
+  &:before {
+    top: 0;
 
-    border-right: 1px solid var(--blue);
-    background: var(--pink);
+    transform: skew(35deg);
+    transform-origin: bottom right;
+
+    border-left: 1px solid var(--pink);
+    border-right: 1px solid var(--pink);
   }
 }
 
-*/
+.nav__list {
+  &:before {
+    content: " ";
+    position: absolute;
+    top: var(--nav-decor-height);
+    right: 0;
+    bottom: var(--nav-decor-height);
+
+    width: var(--nav-decor-width);
+
+    border-left: 1px solid var(--pink);
+    border-right: 1px solid var(--pink);
+  }
+}
