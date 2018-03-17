@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import FontFaceObserver from "fontfaceobserver";
 
-import { Footer } from "formidable-landers";
+// import { Footer } from "formidable-landers";
 import config from "../../data/site-config";
 import FORMIDABLELOGO from "../../static/logos/formidable.svg";
 import "../styles/styles.css";
@@ -63,7 +63,6 @@ class Layout extends React.Component {
           </a>
         </header>
         {children()}
-        <Footer theme="light" />
       </div>
     );
   }

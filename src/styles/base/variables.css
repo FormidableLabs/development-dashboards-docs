@@ -41,3 +41,8 @@
   --z-increment: 1;
   --z-nav: 100;
 }
+
+/* 
+    Media Queries
+*/
+@custom-media --large-viewport only screen and (min-width: 1024px);

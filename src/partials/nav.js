@@ -22,7 +22,7 @@ export default class Nav extends React.Component {
               spy
               to="anchor1"
             >
-              Home
+              <span className="clip">Home</span>
             </Link>
           </li>
           <li className="nav__list__item">
@@ -35,7 +35,7 @@ export default class Nav extends React.Component {
               spy
               to="anchor2"
             >
-              Webpack
+              <span className="clip">Webpack</span>
             </Link>
           </li>
           <li className="nav__list__item">
@@ -48,7 +48,7 @@ export default class Nav extends React.Component {
               spy
               to="anchor3"
             >
-              Electron
+              <span className="clip">Electron</span>
             </Link>
           </li>
           <li className="nav__list__item">
@@ -61,7 +61,7 @@ export default class Nav extends React.Component {
               spy
               to="anchor4"
             >
-              InspectPack
+              <span className="clip">InspectPack</span>
             </Link>
           </li>
           <li className="nav__list__item">
@@ -74,7 +74,7 @@ export default class Nav extends React.Component {
               spy
               to="anchor5"
             >
-              NodeJs
+              <span className="clip">NodeJs</span>
             </Link>
           </li>
         </ul>
