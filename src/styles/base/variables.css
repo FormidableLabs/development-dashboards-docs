@@ -45,4 +45,5 @@
 /* 
     Media Queries
 */
+@custom-media --medium-viewport only screen and (min-width: 768px);
 @custom-media --large-viewport only screen and (min-width: 1024px);
