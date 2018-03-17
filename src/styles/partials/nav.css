@@ -37,6 +37,7 @@
 
 /* Circle/Dot */
 :root {
+  /* The spacing between the border and the dot */
   --nav-dot-spacing: calc(0.5 * var(--s3));
 }
 .nav__link:after {
@@ -46,7 +47,6 @@
   left: calc(-1 * var(--nav-dot-spacing));
 
   height: var(--s3);
-  /* Padding the space between border and dot */
   padding: var(--nav-dot-spacing);
   width: var(--s3);
 

@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-// Section
 export default class Install extends React.Component {
   static propTypes = {
     accent: PropTypes.string,
