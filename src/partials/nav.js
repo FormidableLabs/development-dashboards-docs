@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-scroll";
 
-// Section
 export default class Nav extends React.Component {
   static propTypes = {
     handleClick: PropTypes.func
