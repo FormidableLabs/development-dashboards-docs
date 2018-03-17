@@ -24,17 +24,18 @@ module.exports = {
         path: `${__dirname}/src/pages/`
       }
     },
-    // Enable for formidable-landers, but disabled now so all CSS will re-compile
-    // {
-    //   resolve: "gatsby-plugin-postcss-sass",
-    //   options: {
-    //     postCssPlugins: [
-    //       require("postcss-import")(),
-    //       require("postcss-url")({ url: "inline" }),
-    //       require("postcss-cssnext")()
-    //     ]
-    //   }
-    // },
+    // TODO: Only styles.css triggers compiling
+    // Fix so that any CSS file triggers compiling
+    {
+      resolve: "gatsby-plugin-postcss-sass",
+      options: {
+        postCssPlugins: [
+          require("postcss-import")(),
+          require("postcss-url")({ url: "inline" }),
+          require("postcss-cssnext")()
+        ]
+      }
+    },
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {

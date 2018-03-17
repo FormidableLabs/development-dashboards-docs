@@ -8,7 +8,7 @@ export default class Index extends React.Component {
   render() {
     return (
       <main>
-        <div className="Hero tc bg-navy pv6 ph1 mb5 flex flex-column flex-nowrap justify-center">
+        <div className="Hero tc bg-navy pv6 ph1 mb5 flex flex-column flex-nowrap justify-center anchor1">
           <div className="Hero-veil ba b--pink" />
           <h1 className="HeadingA HeadingA--hero">Development Dashboards</h1>
           <h2 className="HeadingB">by Formidable Open Source</h2>

@@ -15,7 +15,7 @@
 }
 
 .nav__list__item {
-  margin-top: var(--s3);
+  margin-top: var(--s5);
   padding: var(--s2);
 }
 
@@ -24,8 +24,6 @@
 
   cursor: pointer;
   display: block;
-  height: var(--s5);
-  width: var(--s5);
 
   color: transparent;
   text-align: right;
@@ -33,45 +31,56 @@
   transition: all 0.5s;
 }
 
-.nav__link:after,
-.nav__link:before {
-  content: " ";
-  position: absolute;
-}
-
 /* Circle/Dot */
 .nav__link:after {
+  content: " ";
+  position: absolute;
   top: 0;
   right: 0;
 
-  height: calc(var(--s5) * 1.75);
-  width: calc(var(--s5) * 1.75);
+  height: var(--s3);
+  /* Padding the space between border and dot */
+  padding: calc(0.5 * var(--s3));
+  width: var(--s3);
 
-  // background: var(--white);
-  background: repeating-radial-gradient(
-    circle,
-    var(--white),
-    var(--white) var(--s3),
-    transparent var(--s3),
-    transparent var(--s4),
-    var(--white) var(--s4),
-    var(--white) calc(var(--s4) + 1px)
-  );
-  border-radius: var(--s5);
-}
-
-/* Circle/Dot Outline */
-.nav__link:before {
-  top: 0;
-  right: 0;
-
-  height: var(--s5);
-  width: var(--s5);
-
+  background-color: var(--white);
+  background-clip: content-box;
   border-width: 1px;
   border-style: solid;
+  border-color: transparent;
+  border-radius: 50%;
+}
+
+/* On hover, show the border */
+.nav__list__item:nth-child(1) .nav__link:after {
+  background-color: var(--blue);
+}
+.nav__list__item:nth-child(1) .nav__link:hover:after {
+  border-color: var(--blue);
+}
+.nav__list__item:nth-child(2) .nav__link:after {
+  background-color: var(--pink);
+}
+.nav__list__item:nth-child(2) .nav__link:hover:after {
   border-color: var(--pink);
-  border-radius: var(--s5);
+}
+.nav__list__item:nth-child(3) .nav__link:after {
+  background-color: var(--orange);
+}
+.nav__list__item:nth-child(3) .nav__link:hover:after {
+  border-color: var(--orange);
+}
+.nav__list__item:nth-child(4) .nav__link:after {
+  background-color: var(--yellow);
+}
+.nav__list__item:nth-child(4) .nav__link:hover:after {
+  border-color: var(--yellow);
+}
+.nav__list__item:nth-child(5) .nav__link:after {
+  background-color: var(--green);
+}
+.nav__list__item:nth-child(5) .nav__link:hover:after {
+  border-color: var(--green);
 }
 
 /*

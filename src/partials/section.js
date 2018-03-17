@@ -6,7 +6,9 @@ export default class Section extends React.Component {
   render() {
     const { accent, children, title, index } = this.props;
     return (
-      <section className="Section pv6 ph2 mb5 bg-light-navy">
+      <section
+        className={`Section pv6 ph2 mb5 bg-light-navy anchor${index + 1}`}
+      >
         <div className="center mb0 mt0 mw11">
           <header className="flex flex-row flex-nowrap justify-between align-center">
             <h1 className="HeadingB">{title}</h1>
