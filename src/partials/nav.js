@@ -14,7 +14,7 @@ export default class Nav extends React.Component {
           <li className="nav__list__item">
             <Link
               className="nav__link"
-              activeClass="active"
+              activeClass="is-active"
               duration={500}
               hashSpy
               smooth
@@ -27,7 +27,7 @@ export default class Nav extends React.Component {
           <li className="nav__list__item">
             <Link
               className="nav__link"
-              activeClass="active"
+              activeClass="is-active"
               duration={500}
               hashSpy
               smooth
@@ -40,7 +40,7 @@ export default class Nav extends React.Component {
           <li className="nav__list__item">
             <Link
               className="nav__link"
-              activeClass="active"
+              activeClass="is-active"
               duration={500}
               hashSpy
               smooth
@@ -53,7 +53,7 @@ export default class Nav extends React.Component {
           <li className="nav__list__item">
             <Link
               className="nav__link"
-              activeClass="active"
+              activeClass="is-active"
               duration={500}
               hashSpy
               smooth
@@ -66,7 +66,7 @@ export default class Nav extends React.Component {
           <li className="nav__list__item">
             <Link
               className="nav__link"
-              activeClass="active"
+              activeClass="is-active"
               duration={500}
               hashSpy
               smooth

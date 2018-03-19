@@ -58,40 +58,45 @@
   border-radius: 50%;
 }
 
-/* On hover, show the border */
+/* On hover and when active, show the border */
 .nav__list__item:nth-child(1) .nav__link:after {
   background-color: var(--blue);
 }
-.nav__list__item:nth-child(1) .nav__link:hover:after {
+.nav__list__item:nth-child(1) .nav__link:hover:after,
+.nav__list__item:nth-child(1) .nav__link.is-active:after {
   border-color: var(--blue);
 }
 .nav__list__item:nth-child(2) .nav__link:after {
   background-color: var(--pink);
 }
-.nav__list__item:nth-child(2) .nav__link:hover:after {
+.nav__list__item:nth-child(2) .nav__link:hover:after,
+.nav__list__item:nth-child(2) .nav__link.is-active:after {
   border-color: var(--pink);
 }
 .nav__list__item:nth-child(3) .nav__link:after {
   background-color: var(--orange);
 }
-.nav__list__item:nth-child(3) .nav__link:hover:after {
+.nav__list__item:nth-child(3) .nav__link:hover:after,
+.nav__list__item:nth-child(3) .nav__link.is-active:after {
   border-color: var(--orange);
 }
 .nav__list__item:nth-child(4) .nav__link:after {
   background-color: var(--yellow);
 }
-.nav__list__item:nth-child(4) .nav__link:hover:after {
+.nav__list__item:nth-child(4) .nav__link:hover:after,
+.nav__list__item:nth-child(4) .nav__link.is-active:after {
   border-color: var(--yellow);
 }
 .nav__list__item:nth-child(5) .nav__link:after {
   background-color: var(--green);
 }
-.nav__list__item:nth-child(5) .nav__link:hover:after {
+.nav__list__item:nth-child(5) .nav__link:hover:after,
+.nav__list__item:nth-child(5) .nav__link.is-active:after {
   border-color: var(--green);
 }
 
 /*
-    Decorative Lines 
+    Decorative Lines
 */
 :root {
   --nav-decor-height: var(--s3);
