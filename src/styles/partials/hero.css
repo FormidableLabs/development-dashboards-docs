@@ -141,6 +141,30 @@
   }
 }
 
+/* Top left and Top Right decorative corners */
+.hero__header--edges {
+  &:before,
+  &:after {
+    content: " ";
+    position: absolute;
+
+    top: calc(0.25 * var(--s1));
+
+    width: var(--s6);
+    height: var(--s6);
+  }
+
+  &:before {
+    left: calc(0.25 * var(--s1));
+    box-shadow: calc(-1 * var(--s1)) calc(-1 * var(--s1)) 0 0 var(--pink);
+  }
+
+  &:after {
+    right: calc(0.25 * var(--s1));
+    box-shadow: var(--s1) calc(-1 * var(--s1)) 0 0 var(--pink);
+  }
+}
+
 .hero__footer {
   align-items: flex-start;
   display: flex;
