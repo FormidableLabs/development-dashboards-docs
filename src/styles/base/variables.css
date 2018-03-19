@@ -1,6 +1,6 @@
 :root {
-  /*  
-      Colors 
+  /*
+      Colors
   */
   --blue: #38c8ef;
   --pink: #f038b3;
@@ -13,13 +13,13 @@
   --black: #000;
   --white: #fff;
 
-  /*  
-      Font Size Base 
+  /*
+      Font Size Base
   */
   --base: 14px;
 
-  /*  
-      Spacing/Sizing 
+  /*
+      Spacing/Sizing
   */
   --s1: 0.25rem; /* 3.5px */
   --s2: 0.5rem; /* 7px */
@@ -34,15 +34,23 @@
   --s11: 64rem; /* 896px */
   --s12: 96rem; /* 1344px */
 
-  /*  
-      Z-Index 
+  /*
+        Letter Spacing
   */
+  --tracked-tight: -0.05em;
+  --tracked: 0.1em;
+  --tracked-mega: 0.25em;
+
+  /*
+      Z-Index
+  */
+  --z-decrement: -1;
   --z-base: 0;
   --z-increment: 1;
   --z-nav: 100;
 }
 
-/* 
+/*
     Media Queries
 */
 @custom-media --medium-viewport only screen and (min-width: 768px);

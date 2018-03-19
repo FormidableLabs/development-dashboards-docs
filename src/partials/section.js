@@ -11,11 +11,8 @@ export default class Section extends React.Component {
       >
         <div className="center mb0 mt0 mw11">
           <header className="flex flex-row flex-nowrap justify-between align-center">
-            <h1 className="HeadingB">{title}</h1>
-            <span
-              className={`HeadingA tracked-mega ${accent}`}
-              aria-hidden="true"
-            >
+            <h1 className="subtitle">{title}</h1>
+            <span className={`title tracked-mega ${accent}`} aria-hidden="true">
               0{index}
             </span>
           </header>
