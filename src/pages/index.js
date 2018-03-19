@@ -44,7 +44,7 @@ export default class Index extends React.Component {
           </p>
           <Install accent="yellow">npm install -g inspectpack</Install>
         </Section>
-        <Section title="NodeJS Dashboard" accent="green" index={4}>
+        <Section title="Node.js Dashboard" accent="green" index={4}>
           <p className="mw9 order-2">
             A telemetry dashboard for Node.js apps that runs in real time to
             show you what’s happening inside your Node.js process, right in your

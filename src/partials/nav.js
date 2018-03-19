@@ -73,7 +73,7 @@ export default class Nav extends React.Component {
               spy
               to="anchor5"
             >
-              <span className="clip">NodeJs</span>
+              <span className="clip">Node.js</span>
             </Link>
           </li>
         </ul>
