@@ -1,0 +1,151 @@
+.nav {
+  position: fixed;
+  top: 25vh;
+  right: var(--s3);
+
+  padding: var(--s3) var(--s5) var(--s3) var(--s3);
+
+  z-index: var(--z-increment);
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.nav__list__item {
+  margin-top: var(--s5);
+  padding: var(--s2);
+  position: relative;
+}
+
+.nav__list__item:first-child {
+  margin-top: 0;
+}
+
+.nav__link {
+  cursor: pointer;
+  display: block;
+
+  color: transparent;
+  text-align: right;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+
+/* Circle/Dot */
+:root {
+  /* The spacing between the border and the dot */
+  --nav-dot-spacing: calc(0.5 * var(--s3));
+}
+.nav__link:after {
+  content: " ";
+  position: absolute;
+  top: calc(-1 * var(--nav-dot-spacing));
+  left: calc(-1 * var(--nav-dot-spacing));
+
+  height: var(--s3);
+  padding: var(--nav-dot-spacing);
+  width: var(--s3);
+
+  background-color: var(--white);
+  background-clip: content-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 50%;
+}
+
+/* On hover and when active, show the border */
+.nav__list__item:nth-child(1) .nav__link:after {
+  background-color: var(--blue);
+}
+.nav__list__item:nth-child(1) .nav__link:hover:after,
+.nav__list__item:nth-child(1) .nav__link.is-active:after {
+  border-color: var(--blue);
+}
+.nav__list__item:nth-child(2) .nav__link:after {
+  background-color: var(--pink);
+}
+.nav__list__item:nth-child(2) .nav__link:hover:after,
+.nav__list__item:nth-child(2) .nav__link.is-active:after {
+  border-color: var(--pink);
+}
+.nav__list__item:nth-child(3) .nav__link:after {
+  background-color: var(--orange);
+}
+.nav__list__item:nth-child(3) .nav__link:hover:after,
+.nav__list__item:nth-child(3) .nav__link.is-active:after {
+  border-color: var(--orange);
+}
+.nav__list__item:nth-child(4) .nav__link:after {
+  background-color: var(--yellow);
+}
+.nav__list__item:nth-child(4) .nav__link:hover:after,
+.nav__list__item:nth-child(4) .nav__link.is-active:after {
+  border-color: var(--yellow);
+}
+.nav__list__item:nth-child(5) .nav__link:after {
+  background-color: var(--green);
+}
+.nav__list__item:nth-child(5) .nav__link:hover:after,
+.nav__list__item:nth-child(5) .nav__link.is-active:after {
+  border-color: var(--green);
+}
+
+/*
+    Decorative Lines
+*/
+:root {
+  --nav-decor-height: var(--s3);
+  --nav-decor-width: var(--s2);
+}
+@media (--medium-viewport) {
+  .nav {
+    &:after,
+    &:before {
+      content: " ";
+      position: absolute;
+      right: 0;
+
+      height: var(--nav-decor-height);
+      width: var(--nav-decor-width);
+    }
+
+    &:after {
+      bottom: 0;
+
+      transform: skew(-35deg);
+      transform-origin: top right;
+
+      border-left: 1px solid var(--pink);
+      border-right: 1px solid var(--pink);
+    }
+    &:before {
+      top: 0;
+
+      transform: skew(35deg);
+      transform-origin: bottom right;
+
+      border-left: 1px solid var(--pink);
+      border-right: 1px solid var(--pink);
+    }
+  }
+
+  .nav__list {
+    &:before {
+      content: " ";
+      position: absolute;
+      top: var(--nav-decor-height);
+      right: 0;
+      bottom: var(--nav-decor-height);
+
+      width: var(--nav-decor-width);
+
+      border-left: 1px solid var(--pink);
+      border-right: 1px solid var(--pink);
+    }
+  }
+}

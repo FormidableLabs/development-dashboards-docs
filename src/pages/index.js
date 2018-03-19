@@ -1,13 +1,14 @@
 import React from "react";
 import Section from "../partials/section";
 import Install from "../partials/install";
+import Nav from "../partials/nav";
 
 // Home page
 export default class Index extends React.Component {
   render() {
     return (
       <main>
-        <div className="Hero tc bg-navy pv6 ph1 mb5 flex flex-column flex-nowrap justify-center">
+        <div className="Hero tc bg-navy pv6 ph1 mb5 flex flex-column flex-nowrap justify-center anchor1">
           <div className="Hero-veil ba b--pink" />
           <h1 className="HeadingA HeadingA--hero">Development Dashboards</h1>
           <h2 className="HeadingB">by Formidable Open Source</h2>
@@ -43,7 +44,7 @@ export default class Index extends React.Component {
           </p>
           <Install accent="yellow">npm install -g inspectpack</Install>
         </Section>
-        <Section title="NodeJS Dashboard" accent="green" index={4}>
+        <Section title="Node.js Dashboard" accent="green" index={4}>
           <p className="mw9 order-2">
             A telemetry dashboard for Node.js apps that runs in real time to
             show you what’s happening inside your Node.js process, right in your
@@ -53,6 +54,7 @@ export default class Index extends React.Component {
             npm install -g nodejs-dashboard
           </Install>
         </Section>
+        <Nav />
       </main>
     );
   }

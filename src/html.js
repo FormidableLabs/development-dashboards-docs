@@ -8,7 +8,7 @@ let stylesStr;
 if (process.env.NODE_ENV === "production") {
   try {
     // eslint-disable-next-line import/no-webpack-loader-syntax
-    inlinedStyles = require("!raw-loader!../public/styles.css");
+    stylesStr = require("!raw-loader!../public/styles.css");
   } catch (e) {
     console.log(e); // eslint-disable-line no-console
   }

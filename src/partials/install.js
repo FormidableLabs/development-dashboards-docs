@@ -1,8 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-// Section
 export default class Install extends React.Component {
+  static propTypes = {
+    accent: PropTypes.string,
+    children: PropTypes.node,
+    order: PropTypes.number
+  };
+
   render() {
     const { accent, children, order } = this.props;
     return (
@@ -14,9 +19,3 @@ export default class Install extends React.Component {
     );
   }
 }
-
-Install.propTypes = {
-  accent: PropTypes.string,
-  children: PropTypes.node,
-  order: PropTypes.number
-};

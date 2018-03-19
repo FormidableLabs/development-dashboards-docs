@@ -24,17 +24,15 @@ module.exports = {
         path: `${__dirname}/src/pages/`
       }
     },
+    // TODO: Only styles.css triggers compiling
+    // Fix so that any CSS file triggers compiling
     {
       resolve: "gatsby-plugin-postcss-sass",
       options: {
         postCssPlugins: [
           require("postcss-import")(),
           require("postcss-url")({ url: "inline" }),
-          require("postcss-cssnext")(),
-          // Add plugins here:
-          require("postcss-inline-svg")(),
-          require("postcss-browser-reporter"),
-          require("postcss-reporter")
+          require("postcss-cssnext")()
         ]
       }
     },

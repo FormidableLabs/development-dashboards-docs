@@ -5,7 +5,8 @@ import FontFaceObserver from "fontfaceobserver";
 
 import { Footer } from "formidable-landers";
 import config from "../../data/site-config";
-import FORMIDABLELOGO from "../../static/logos/formidable.svg";
+import FORMIDABLELOGO from "../assets/formidable.svg";
+
 import "../styles/styles.css";
 
 class Layout extends React.Component {
