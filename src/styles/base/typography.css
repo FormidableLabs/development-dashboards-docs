@@ -19,19 +19,18 @@ html.exo-active {
   font-family: "Exo", sans-serif;
   line-height: 2;
 }
+
 /*
-    HeadingA
+    Title
 */
-html:not(.lazer84-active) .HeadingA {
+html:not(.lazer84-active) .title {
   font-family: "Arial Black", "Impact", sans-serif;
   letter-spacing: -0.075em;
 }
-
-html.lazer84-active .HeadingA {
+html.lazer84-active .title {
   font-family: "lazer84", sans-serif;
 }
-
-.HeadingA {
+.title {
   font-size: var(--s6);
   font-style: italic;
   font-weight: normal;
@@ -40,33 +39,18 @@ html.lazer84-active .HeadingA {
   filter: drop-shadow(var(--s1) var(--s1) 0 var(--black));
 }
 
-.HeadingA--hero {
-  background-image: linear-gradient(
-    90deg,
-    var(--pink) 4%,
-    var(--orange) 28%,
-    var(--yellow) 47%,
-    var(--green) 72%,
-    var(--blue) 98%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  position: relative;
-}
 /*
-    HeadingB
+    Subtitle
 */
-html:not(.montserrat-active) .HeadingB {
+html:not(.montserrat-active) .subtitle {
   font-family: "Helvetica", "Arial", sans-serif;
   letter-spacing: 6px;
 }
-html.montserrat-active .HeadingB {
+html.montserrat-active .subtitle {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 5px;
 }
-.HeadingB {
+.subtitle {
   display: block;
   font-size: var(--s4);
   font-weight: 700;

@@ -1,0 +1,215 @@
+.hero {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+
+  height: 70vh;
+  margin-bottom: var(--s5);
+  min-height: 400px;
+  padding: var(--s6) var(--s1);
+  position: relative;
+
+  background-color: var(--navy);
+  background-image: url("../../../static/bg-space.jpg");
+  background-size: cover;
+  border-top: 1px solid color(var(--white) alpha(15%));
+  border-bottom: 1px solid color(var(--white) alpha(15%));
+  box-shadow: 0 6px 3px 0 var(--black), 0 -4px 23px 0 var(--black);
+
+  text-align: center;
+}
+
+.hero__title {
+  background-image: linear-gradient(
+    90deg,
+    var(--pink) 4%,
+    var(--orange) 28%,
+    var(--yellow) 47%,
+    var(--green) 72%,
+    var(--blue) 98%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.hero__subtitle {
+  margin: 0;
+}
+
+@media (--large-viewport) {
+  /* Title should 'overflow' the right & left sides of its container */
+  .hero__title {
+    position: absolute;
+    top: var(--s6);
+    left: 50%;
+
+    padding: 0 var(--s3); /* Prevents clipping of text */
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+
+  .hero__subtitle {
+    padding-top: var(--s6); /* Leave room for title */
+  }
+}
+
+.hero__button {
+  background: color(var(--pink) alpha(70%));
+  border: 1px solid var(--pink);
+  color: white;
+  cursor: pointer;
+  font-size: var(--s3);
+  font-weight: normal;
+  letter-spacing: var(--tracked);
+  margin: 0;
+  padding: var(--s3) var(--s6);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.hero__content {
+  margin: 0 auto;
+  padding: 0;
+  max-width: var(--s11);
+  width: 80vw;
+}
+
+/*
+    Decorative
+
+    Hero uses `background-clip: content-box` to create double, separated borders.
+
+    Hero is broken into two major parts: header & footer.
+
+    The header contains the top, right, and left outside borders.
+
+    The footer contains three parts: decor, button, decor.
+    The first decor contains the left and bottom outside borders.
+    The button contains top, bottom, left & right outside borders.
+    The last decor contains the right and bottom outside borders.
+
+*/
+:root {
+  --hero-spacing: var(--s3);
+  --footer-decor-height: calc(var(--hero-spacing) * 3.5);
+}
+
+.hero__header__content {
+  padding: var(--s6) 0;
+}
+
+/* Outside, Separated Border */
+.hero__header,
+.hero__footer__decor {
+  overflow: visible;
+  padding: var(--hero-spacing);
+  position: relative;
+
+  background-color: color(var(--light-navy) alpha(70%));
+  background-clip: content-box;
+
+  /* Inside Borders */
+  &:before {
+    content: " ";
+
+    position: absolute;
+  }
+}
+
+.hero__header {
+  padding-bottom: 0;
+
+  border-top: 1px solid var(--pink);
+  border-right: 1px solid var(--pink);
+  border-left: 1px solid var(--pink);
+
+  &:before {
+    top: var(--hero-spacing);
+    right: var(--hero-spacing);
+    bottom: 0;
+    left: var(--hero-spacing);
+
+    border-top: 1px solid var(--pink);
+    border-right: 1px solid var(--pink);
+    border-left: 1px solid var(--pink);
+  }
+}
+
+.hero__footer {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 0;
+}
+
+.hero__footer__decor {
+  height: var(--footer-decor-height);
+  padding-top: 0;
+  width: 100%;
+
+  border-bottom: 1px solid var(--pink);
+
+  &:before {
+    top: 0;
+    bottom: var(--hero-spacing);
+
+    border-right: 1px solid var(--pink);
+    border-bottom: 1px solid var(--pink);
+    border-left: 1px solid var(--pink);
+  }
+}
+
+.hero__footer__decor:first-child {
+  padding-right: 0;
+
+  border-left: 1px solid var(--pink);
+
+  &:before {
+    right: 0;
+    left: var(--hero-spacing);
+  }
+}
+
+.hero__footer__decor:last-child {
+  padding-left: 0;
+
+  border-right: 1px solid var(--pink);
+
+  &:before {
+    right: var(--hero-spacing);
+    left: 0;
+  }
+}
+
+.hero__footer__button {
+  padding: var(--hero-spacing);
+  position: relative;
+
+  background-clip: content-box;
+
+  border-top: 1px solid var(--pink);
+  border-bottom: 1px solid var(--pink);
+
+  /* Bottom Left & Bottom Right borders of button */
+  &:before {
+    content: " ";
+    position: absolute;
+
+    top: calc(var(--footer-decor-height) - 2px);
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    border-right: 1px solid var(--pink);
+    border-left: 1px solid var(--pink);
+  }
+}

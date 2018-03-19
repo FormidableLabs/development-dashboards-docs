@@ -1,0 +1,44 @@
+* {
+  box-sizing: inherit;
+}
+
+html {
+  background-color: var(--navy);
+  box-sizing: border-box;
+  color: var(--white);
+  font-size: var(--base);
+}
+
+/* single direction margins */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0 0 var(--s3) 0;
+}
+
+svg {
+  fill: currentColor;
+}
+
+a:link {
+  color: inherit;
+  transition: opacity 250ms ease-in-out;
+}
+
+a:hover {
+  opacity: 0.8;
+  transition: opacity 250ms ease-in-out;
+}
+
+a:visited {
+  color: inherit;
+}
+
+code,
+.code {
+  font-family: "Menlo", "Consolas", "Courier", monospace;
+}

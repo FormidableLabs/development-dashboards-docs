@@ -29,11 +29,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-postcss-sass",
       options: {
-        postCssPlugins: [
-          require("postcss-import")(),
-          require("postcss-url")({ url: "inline" }),
-          require("postcss-cssnext")()
-        ]
+        postCssPlugins: [require("postcss-url")({ url: "inline" })]
       }
     },
     {
