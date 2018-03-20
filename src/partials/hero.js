@@ -13,7 +13,6 @@ export default class Hero extends Component {
                 by Formidable Open Source
               </h2>
             </div>
-            <div className="hero__header--edges" />
           </div>
           <div className="hero__footer">
             <div className="hero__footer__decor" />
