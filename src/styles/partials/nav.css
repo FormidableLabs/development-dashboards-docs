@@ -1,12 +1,16 @@
 .nav {
   position: fixed;
   top: 50%;
-  right: var(--s3);
+  right: 0;
 
   padding: var(--s3) var(--s5) var(--s3) var(--s3);
   transform: translateY(-50%);
 
   z-index: var(--z-increment);
+
+  @media (--medium-viewport) {
+    right: var(--s3);
+  }
 }
 
 .nav__list {

@@ -30,13 +30,22 @@ html:not(.lazer84-active) .title {
 html.lazer84-active .title {
   font-family: "lazer84", sans-serif;
 }
+
 .title {
-  font-size: var(--s6);
+  font-size: calc(var(--s6) - 2rem);
   font-style: italic;
   font-weight: normal;
   line-height: 1.2;
   text-transform: uppercase;
   filter: drop-shadow(var(--s1) var(--s1) 0 var(--black));
+
+  @media (--small-viewport) {
+    font-size: calc(var(--s6) - 1rem);
+  }
+
+  @media (--medium-viewport) {
+    font-size: var(--s6);
+  }
 }
 
 /*
@@ -52,8 +61,12 @@ html.montserrat-active .subtitle {
 }
 .subtitle {
   display: block;
-  font-size: var(--s4);
+  font-size: var(--s3);
   font-weight: 700;
   line-height: 1.5;
   text-transform: uppercase;
+
+  @media (--medium-viewport) {
+    font-size: var(--s4);
+  }
 }

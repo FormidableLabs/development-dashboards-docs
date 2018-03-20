@@ -6,7 +6,11 @@ html {
   background-color: var(--navy);
   box-sizing: border-box;
   color: var(--white);
-  font-size: var(--base);
+  font-size: 12px;
+
+  @media (--small-viewport) {
+    font-size: var(--base);
+  }
 }
 
 /* single direction margins */

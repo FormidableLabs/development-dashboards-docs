@@ -24,14 +24,6 @@ module.exports = {
         path: `${__dirname}/src/pages/`
       }
     },
-    // TODO: Only styles.css triggers compiling
-    // Fix so that any CSS file triggers compiling
-    {
-      resolve: "gatsby-plugin-postcss-sass",
-      options: {
-        postCssPlugins: [require("postcss-url")({ url: "inline" })]
-      }
-    },
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {

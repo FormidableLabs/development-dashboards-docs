@@ -7,16 +7,19 @@
 
   height: 70vh;
   margin-bottom: var(--s5);
-  min-height: 400px;
+  min-height: 600px;
   padding: var(--s6) var(--s1);
   position: relative;
 
   background-color: var(--navy);
-  background-image: url("../../../static/bg-space.jpg");
+  background-image: url("/bg-space.jpg");
   background-size: cover;
   border-top: 1px solid color(var(--white) alpha(15%));
   border-bottom: 1px solid color(var(--white) alpha(15%));
   box-shadow: 0 6px 3px 0 var(--black), 0 -4px 23px 0 var(--black);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   text-align: center;
 }
@@ -76,12 +79,100 @@
 .hero__content {
   margin: 0 auto;
   padding: 0;
-  max-width: var(--s11);
-  width: 80vw;
+  width: 98%;
+
+  @media (--medium-viewport) {
+    width: 85%;
+  }
+
+  @media (--large-viewport) {
+    max-width: var(--s11);
+    width: 80%;
+  }
 }
 
 /*
-    Decorative
+    Decoration: Corner Edges
+
+*/
+:root {
+  --hero-corner-length: var(--s6);
+  --hero-corner-width: 5px; /* Needs to be an odd number to be perfectly centered */
+  --hero-corner-width-offset: calc((var(--hero-corner-width) + 1) / -2);
+}
+
+.hero__header {
+  /* Top left and top right vertical pieces (| |) of Corners */
+  &:before {
+    content: " ";
+
+    position: absolute;
+    top: var(--hero-corner-width-offset);
+    right: var(--hero-corner-width-offset);
+    left: var(--hero-corner-width-offset);
+
+    height: var(--hero-corner-length);
+
+    border-left: var(--hero-corner-width) solid var(--pink);
+    border-right: var(--hero-corner-width) solid var(--pink);
+  }
+
+  /* Top left and top right horizontal pieces (_ _) of Corners */
+  &:after {
+    content: " ";
+
+    position: absolute;
+    top: var(--hero-corner-width-offset);
+    right: 0;
+    left: 0;
+
+    background-image: linear-gradient(
+      to right,
+      var(--pink),
+      var(--pink) var(--hero-corner-length),
+      transparent var(--hero-corner-length),
+      transparent calc(100% - var(--hero-corner-length)),
+      var(--pink) calc(100% - var(--hero-corner-length))
+    );
+
+    height: var(--hero-corner-width);
+  }
+}
+
+@media (--small-viewport) {
+  .hero__footer__decor {
+    &:after {
+      content: " ";
+
+      position: absolute;
+      bottom: var(--hero-corner-width-offset);
+
+      height: var(--hero-corner-length);
+      width: var(--hero-corner-length);
+
+      border-bottom: var(--hero-corner-width) solid var(--pink);
+    }
+  }
+
+  .hero__footer__decor:first-child {
+    &:after {
+      left: var(--hero-corner-width-offset);
+
+      border-left: var(--hero-corner-width) solid var(--pink);
+    }
+  }
+
+  .hero__footer__decor:last-child {
+    &:after {
+      right: var(--hero-corner-width-offset);
+
+      border-right: var(--hero-corner-width) solid var(--pink);
+    }
+  }
+}
+
+/*
+    Decoration: Double, Separated Borders
 
     Hero uses `background-clip: content-box` to create double, separated borders.
 
@@ -102,24 +193,20 @@
 
 .hero__header__content {
   padding: var(--s6) 0;
+
+  border-top: 1px solid var(--pink);
+  border-right: 1px solid var(--pink);
+  border-left: 1px solid var(--pink);
 }
 
-/* Outside, Separated Border */
+/* Outside, Separated Border Setup */
 .hero__header,
 .hero__footer__decor {
-  overflow: visible;
   padding: var(--hero-spacing);
   position: relative;
 
   background-color: color(var(--light-navy) alpha(70%));
   background-clip: content-box;
-
-  /* Inside Borders */
-  &:before {
-    content: " ";
-
-    position: absolute;
-  }
 }
 
 .hero__header {
@@ -128,17 +215,6 @@
   border-top: 1px solid var(--pink);
   border-right: 1px solid var(--pink);
   border-left: 1px solid var(--pink);
-
-  &:before {
-    top: var(--hero-spacing);
-    right: var(--hero-spacing);
-    bottom: 0;
-    left: var(--hero-spacing);
-
-    border-top: 1px solid var(--pink);
-    border-right: 1px solid var(--pink);
-    border-left: 1px solid var(--pink);
-  }
 }
 
 .hero__footer {
@@ -156,9 +232,14 @@
   padding-top: 0;
   width: 100%;
 
+  /* Outside Border */
   border-bottom: 1px solid var(--pink);
 
+  /* Inside Borders */
   &:before {
+    content: " ";
+
+    position: absolute;
     top: 0;
     bottom: var(--hero-spacing);
 
@@ -168,6 +249,7 @@
   }
 }
 
+/* Bottom Left */
 .hero__footer__decor:first-child {
   padding-right: 0;
 
@@ -179,6 +261,7 @@
   }
 }
 
+/* Bottom Right */
 .hero__footer__decor:last-child {
   padding-left: 0;
 
@@ -211,5 +294,72 @@
 
     border-right: 1px solid var(--pink);
     border-left: 1px solid var(--pink);
+  }
+}
+
+/*
+    Decoration: Trapezoid
+*/
+@media (--small-viewport) {
+  .hero__content {
+    position: relative;
+
+    &:before {
+      content: " ";
+
+      position: absolute;
+      top: 0;
+      left: 50%;
+
+      height: 0;
+      width: var(--s7);
+      transform: translateX(-50%);
+
+      border-left: var(--s3) solid transparent;
+      border-right: var(--s3) solid transparent;
+      border-top: var(--s2) solid var(--pink);
+    }
+  }
+}
+
+/*
+    Decoration: Dots
+*/
+@media (--small-viewport) {
+  .hero__content {
+    /* Top two dots */
+    &:after {
+      content: " ";
+
+      position: absolute;
+      top: calc(var(--s2) / -2.25);
+      left: calc(var(--hero-corner-length) + var(--s3));
+
+      width: var(--s2);
+      height: var(--s2);
+
+      background-color: var(--pink);
+      border-radius: var(--s3);
+      box-shadow: var(--s3) 0 0 0 var(--pink);
+    }
+  }
+
+  .hero__footer {
+    /* Bottom right three dots */
+    &:before {
+      content: " ";
+
+      position: absolute;
+      right: calc(var(--s2) / -2.25);
+      bottom: calc(var(--footer-decor-height) + var(--hero-corner-length));
+
+      width: var(--s2);
+      height: var(--s2);
+
+      background-color: var(--pink);
+      border-radius: var(--s3);
+      box-shadow: 0 calc(-1 * var(--s3)) 0 0 var(--pink),
+        0 calc(-2 * var(--s3)) 0 0 var(--pink);
+    }
   }
 }
