@@ -3,6 +3,11 @@ import Section from "../partials/section";
 import Install from "../partials/install";
 import Nav from "../partials/nav";
 import Hero from "../partials/hero";
+// Images
+import IMAGE_WEBPACK from "../assets/product_webpack.png";
+import IMAGE_NODE_JS from "../assets/product_nodejs.png";
+import IMAGE_INSPECTPACK from "../assets/product_inspectpack.jpg";
+import IMAGE_WEBPACK_ELECTRON from "../assets/product_webpackelectron.jpg";
 
 // Home page
 export default class Index extends React.Component {
@@ -10,8 +15,13 @@ export default class Index extends React.Component {
     return (
       <main>
         <Hero />
-        <Section title="Webpack Dashboard" accent="pink" index={1}>
-          <p className="mw9 order-2">
+        <Section
+          title="Webpack Dashboard"
+          accent="pink"
+          index={1}
+          hero={IMAGE_WEBPACK}
+        >
+          <p className="para order-2">
             A CLI dashboard for your webpack-dev-server, webpack-dashboard
             analyzes your production bundles and provides data on your module
             sizes, asset sizes, and more, right in your terminal.
@@ -20,19 +30,29 @@ export default class Index extends React.Component {
             npm install webpack-dashboard --save-dev
           </Install>
         </Section>
-        <Section title="Webpack Electron Dashboard" accent="orange" index={2}>
-          <p className="mw9">
+        <Section
+          title="Webpack Electron Dashboard"
+          accent="orange"
+          index={2}
+          hero={IMAGE_WEBPACK_ELECTRON}
+        >
+          <p className="para">
             electron-webpack-dashboard, an Electron desktop GUI, enhances
             webpack-dashboard with slick visualizations and improved readouts.
             No need to configure your terminal- just download, drop a couple of
             snippets into your build, and you’re ready to go.
           </p>
-          <div className="ml5">
+          <div className="install install--left">
             <button>download now</button>
           </div>
         </Section>
-        <Section title="InspectPack" accent="yellow" index={3}>
-          <p className="mw9">
+        <Section
+          title="InspectPack"
+          accent="yellow"
+          index={3}
+          hero={IMAGE_INSPECTPACK}
+        >
+          <p className="para">
             inspectpack is an inspection tool for webpack JavaScript bundles
             that gives you insight into your production bundles to help
             determine where you can cut down on size, duplicates, and more. If
@@ -41,8 +61,13 @@ export default class Index extends React.Component {
           </p>
           <Install accent="yellow">npm install -g inspectpack</Install>
         </Section>
-        <Section title="Node.js Dashboard" accent="green" index={4}>
-          <p className="mw9 order-2">
+        <Section
+          title="Node.js Dashboard"
+          accent="green"
+          index={4}
+          hero={IMAGE_NODE_JS}
+        >
+          <p className="para order-2">
             A telemetry dashboard for Node.js apps that runs in real time to
             show you what’s happening inside your Node.js process, right in your
             terminal. No need to instrument code to get the details.

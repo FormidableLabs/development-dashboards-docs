@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import favicon from "../static/logos/favicon.ico";
 import lazer84woff from "../static/fonts/lazer84.woff";
 import lazer84woff2 from "../static/fonts/lazer84.woff2";
 
@@ -35,7 +34,9 @@ class HTML extends Component {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
           {this.props.headComponents}
-          <link rel="shortcut icon" href={favicon} />
+          {/* TODO: Add favicon
+            <link rel="shortcut icon" href={favicon} />
+          */}
           {/* Fonts */}
           <link rel="preload" href={lazer84woff} as="font" />
           <link rel="preload" href={lazer84woff2} as="font" />

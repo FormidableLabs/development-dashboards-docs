@@ -28,6 +28,10 @@ svg {
   fill: currentColor;
 }
 
+img {
+  max-width: 100%;
+}
+
 a:link {
   color: inherit;
   transition: opacity 250ms ease-in-out;

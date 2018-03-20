@@ -11,10 +11,12 @@ export default class Install extends React.Component {
   render() {
     const { accent, children, order } = this.props;
     return (
-      <div className={`m${order ? "r" : "l"}5 order-${order}`}>
-        <code className={`dib pa3 ba b--${accent} ws-nowrap bg-black-25`}>
-          {children}
-        </code>
+      <div
+        className={`install install--${
+          order ? "left" : "right"
+        } order-${order}`}
+      >
+        <code className={`install__code border--${accent}`}>{children}</code>
       </div>
     );
   }
