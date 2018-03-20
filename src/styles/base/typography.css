@@ -20,6 +20,10 @@ html.exo-active {
   line-height: 2;
 }
 
+.para {
+  max-width: var(--s9);
+}
+
 /*
     Title
 */

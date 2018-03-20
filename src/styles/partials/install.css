@@ -1,0 +1,27 @@
+.install {
+  margin-bottom: var(--s4);
+}
+
+@media (--medium-viewport) {
+  .install--right {
+    margin-left: var(--s5);
+  }
+
+  .install--left {
+    margin-right: var(--s5);
+  }
+}
+
+/*
+  Code to install
+*/
+
+.install__code {
+  display: inline-block;
+  padding: var(--s3);
+
+  background-color: color(var(--black) alpha(25%));
+  border-width: 1px;
+  border-style: solid;
+  white-space: nowrap;
+}
