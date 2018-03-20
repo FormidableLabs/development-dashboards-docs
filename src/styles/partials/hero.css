@@ -7,7 +7,7 @@
 
   height: 70vh;
   margin-bottom: var(--s5);
-  min-height: 400px;
+  min-height: 600px;
   padding: var(--s6) var(--s1);
   position: relative;
 
@@ -17,6 +17,9 @@
   border-top: 1px solid color(var(--white) alpha(15%));
   border-bottom: 1px solid color(var(--white) alpha(15%));
   box-shadow: 0 6px 3px 0 var(--black), 0 -4px 23px 0 var(--black);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   text-align: center;
 }
@@ -76,8 +79,16 @@
 .hero__content {
   margin: 0 auto;
   padding: 0;
-  max-width: var(--s11);
-  width: 80vw;
+  width: 98%;
+
+  @media (--medium-viewport) {
+    width: 85%;
+  }
+
+  @media (--large-viewport) {
+    max-width: var(--s11);
+    width: 80%;
+  }
 }
 
 /*
@@ -128,33 +139,35 @@
   }
 }
 
-.hero__footer__decor {
-  &:after {
-    content: " ";
+@media (--small-viewport) {
+  .hero__footer__decor {
+    &:after {
+      content: " ";
 
-    position: absolute;
-    bottom: var(--hero-corner-width-offset);
+      position: absolute;
+      bottom: var(--hero-corner-width-offset);
 
-    height: var(--hero-corner-length);
-    width: var(--hero-corner-length);
+      height: var(--hero-corner-length);
+      width: var(--hero-corner-length);
 
-    border-bottom: var(--hero-corner-width) solid var(--pink);
+      border-bottom: var(--hero-corner-width) solid var(--pink);
+    }
   }
-}
 
-.hero__footer__decor:first-child {
-  &:after {
-    left: var(--hero-corner-width-offset);
+  .hero__footer__decor:first-child {
+    &:after {
+      left: var(--hero-corner-width-offset);
 
-    border-left: var(--hero-corner-width) solid var(--pink);
+      border-left: var(--hero-corner-width) solid var(--pink);
+    }
   }
-}
 
-.hero__footer__decor:last-child {
-  &:after {
-    right: var(--hero-corner-width-offset);
+  .hero__footer__decor:last-child {
+    &:after {
+      right: var(--hero-corner-width-offset);
 
-    border-right: var(--hero-corner-width) solid var(--pink);
+      border-right: var(--hero-corner-width) solid var(--pink);
+    }
   }
 }
 
