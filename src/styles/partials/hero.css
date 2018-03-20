@@ -128,6 +128,36 @@
   }
 }
 
+.hero__footer__decor {
+  &:after {
+    content: " ";
+
+    position: absolute;
+    bottom: var(--hero-corner-width-offset);
+
+    height: var(--hero-corner-length);
+    width: var(--hero-corner-length);
+
+    border-bottom: var(--hero-corner-width) solid var(--pink);
+  }
+}
+
+.hero__footer__decor:first-child {
+  &:after {
+    left: var(--hero-corner-width-offset);
+
+    border-left: var(--hero-corner-width) solid var(--pink);
+  }
+}
+
+.hero__footer__decor:last-child {
+  &:after {
+    right: var(--hero-corner-width-offset);
+
+    border-right: var(--hero-corner-width) solid var(--pink);
+  }
+}
+
 /*
     Decoration: Double, Separated Borders
 
@@ -189,6 +219,7 @@
   padding-top: 0;
   width: 100%;
 
+  /* Outside Border */
   border-bottom: 1px solid var(--pink);
 
   /* Inside Borders */
