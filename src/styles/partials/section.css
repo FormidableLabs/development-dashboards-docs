@@ -24,10 +24,52 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+
+  margin-bottom: var(--s4);
+  position: relative;
+
+  /* The outlined circle */
+  &:after {
+    content: " ";
+    position: absolute;
+
+    top: 50%;
+    left: calc(-1 * var(--s4));
+
+    transform: translateY(-50%);
+
+    height: var(--s2);
+    width: var(--s2);
+
+    border: 1px solid var(--pink);
+    border-radius: var(--s6);
+  }
+
+  /* The 1px line 'arm' */
+  &:before {
+    content: " ";
+    position: absolute;
+
+    top: 50%;
+    left: calc(-2 * var(--s4));
+
+    height: var(--s8);
+    width: var(--s6);
+
+    border-top: 1px solid var(--pink);
+    border-bottom: 1px solid var(--pink);
+    border-left: 1px solid var(--pink);
+
+    clip-path: polygon(0 0, var(--s4) 0, 100% 100%, 0% 100%);
+  }
 }
 
 .section__header__title {
   letter-spacing: var(--tracked-mega);
+}
+
+.section__header__subtitle {
+  margin: 0;
 }
 
 .section__content {
