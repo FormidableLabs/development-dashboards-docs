@@ -81,7 +81,7 @@
 }
 
 /*
-    Decoration: Corner Edges & Dots
+    Decoration: Corner Edges
 
 */
 :root {
@@ -281,5 +281,72 @@
 
     border-right: 1px solid var(--pink);
     border-left: 1px solid var(--pink);
+  }
+}
+
+/*
+    Decoration: Trapezoid
+*/
+@media (--small-viewport) {
+  .hero__content {
+    position: relative;
+
+    &:before {
+      content: " ";
+
+      position: absolute;
+      top: 0;
+      left: 50%;
+
+      height: 0;
+      width: var(--s7);
+      transform: translateX(-50%);
+
+      border-left: var(--s3) solid transparent;
+      border-right: var(--s3) solid transparent;
+      border-top: var(--s2) solid var(--pink);
+    }
+  }
+}
+
+/*
+    Decoration: Dots
+*/
+@media (--small-viewport) {
+  .hero__content {
+    /* Top two dots */
+    &:after {
+      content: " ";
+
+      position: absolute;
+      top: calc(var(--s2) / -2.25);
+      left: calc(var(--hero-corner-length) + var(--s3));
+
+      width: var(--s2);
+      height: var(--s2);
+
+      background-color: var(--pink);
+      border-radius: var(--s3);
+      box-shadow: var(--s3) 0 0 0 var(--pink);
+    }
+  }
+
+  .hero__footer {
+    /* Bottom right three dots */
+    &:before {
+      content: " ";
+
+      position: absolute;
+      right: calc(var(--s2) / -2.25);
+      bottom: calc(var(--footer-decor-height) + var(--hero-corner-length));
+
+      width: var(--s2);
+      height: var(--s2);
+
+      background-color: var(--pink);
+      border-radius: var(--s3);
+      box-shadow: 0 calc(-1 * var(--s3)) 0 0 var(--pink),
+        0 calc(-2 * var(--s3)) 0 0 var(--pink);
+    }
   }
 }
