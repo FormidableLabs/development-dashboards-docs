@@ -20,7 +20,7 @@
   display: inline-block;
   padding: var(--s3);
 
-  background-color: var(--navy);
+  background-color: color(var(--black) alpha(25%));
   border-width: 1px;
   border-style: solid;
   white-space: nowrap;
