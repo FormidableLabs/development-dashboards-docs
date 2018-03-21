@@ -37,25 +37,25 @@
 /*  
     Background Colors
 */
-.bg--blue {
+.bg-blue {
   background-color: var(--blue);
 }
-.bg--pink {
+.bg-pink {
   background-color: var(--pink);
 }
-.bg--orange {
+.bg-orange {
   background-color: var(--orange);
 }
-.bg--yellow {
+.bg-yellow {
   background-color: var(--yellow);
 }
-.bg--green {
+.bg-green {
   background-color: var(--green);
 }
-.bg--light-navy {
+.bg-light-navy {
   background-color: var(--light-navy);
 }
-.bg--navy {
+.bg-navy {
   background-color: var(--navy);
 }
 

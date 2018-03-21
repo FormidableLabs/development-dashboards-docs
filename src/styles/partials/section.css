@@ -26,42 +26,6 @@
   justify-content: space-between;
 
   margin-bottom: var(--s4);
-  position: relative;
-
-  /* The outlined circle */
-  &:after {
-    content: " ";
-    position: absolute;
-
-    top: 50%;
-    left: calc(-1 * var(--s4));
-
-    transform: translateY(-50%);
-
-    height: var(--s2);
-    width: var(--s2);
-
-    border: 1px solid var(--pink);
-    border-radius: var(--s6);
-  }
-
-  /* The 1px line 'arm' */
-  &:before {
-    content: " ";
-    position: absolute;
-
-    top: 50%;
-    left: calc(-2 * var(--s4));
-
-    height: var(--s8);
-    width: var(--s6);
-
-    border-top: 1px solid var(--pink);
-    border-bottom: 1px solid var(--pink);
-    border-left: 1px solid var(--pink);
-
-    clip-path: polygon(0 0, var(--s4) 0, 100% 100%, 0% 100%);
-  }
 }
 
 .section__header__title {
@@ -73,6 +37,7 @@
 }
 
 .section__content {
+  border: 1px solid white;
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -81,6 +46,7 @@
 
   @media (--medium-viewport) {
     flex-direction: row;
+    padding: 0 var(--s1);
   }
 }
 
@@ -105,4 +71,83 @@
 
 .section__figure__img {
   display: block;
+}
+
+/*
+    Decoration
+*/
+.section__header {
+  position: relative;
+
+  /* The outlined circle */
+  &:after {
+    content: " ";
+    position: absolute;
+
+    top: 50%;
+    left: calc(-1 * var(--s4));
+
+    transform: translateY(-50%);
+
+    height: var(--s2);
+    width: var(--s2);
+
+    border-width: 1px;
+    border-style: solid;
+    border-radius: var(--s6);
+  }
+
+  /* The 1px line 'arm' */
+  &:before {
+    content: " ";
+    position: absolute;
+
+    top: 50%;
+    left: calc(-2 * var(--s4));
+
+    height: var(--s8);
+    width: var(--s6);
+
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-style: solid;
+
+    clip-path: polygon(0 0, var(--s4) 0, 100% 100%, 0% 100%);
+  }
+}
+
+.section__header--pink {
+  &:after,
+  &:before {
+    border-color: var(--pink);
+  }
+}
+
+.section__header--orange {
+  &:after,
+  &:before {
+    border-color: var(--orange);
+  }
+}
+
+.section__header--yellow {
+  &:after,
+  &:before {
+    border-color: var(--yellow);
+  }
+}
+
+.section__header--green {
+  &:after,
+  &:before {
+    border-color: var(--green);
+  }
+}
+
+.section__header--blue {
+  &:after,
+  &:before {
+    border-color: var(--blue);
+  }
 }

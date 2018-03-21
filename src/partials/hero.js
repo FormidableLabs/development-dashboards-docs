@@ -19,7 +19,7 @@ export default class Hero extends Component {
             <div className="hero__footer__button">
               <Link
                 activeClass="is-active"
-                className="subtitle hero__button"
+                className="subtitle button button--pink"
                 duration={500}
                 hashSpy
                 smooth
