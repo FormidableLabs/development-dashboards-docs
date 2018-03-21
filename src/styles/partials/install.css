@@ -3,12 +3,12 @@
 }
 
 @media (--medium-viewport) {
-  .install.order-2 {
-    margin-left: var(--s5);
-  }
-
   .install.order-1 {
     margin-right: var(--s5);
+  }
+
+  .install.order-2 {
+    margin-left: var(--s5);
   }
 }
 
@@ -31,10 +31,15 @@
 */
 
 :root {
-  --install-decor-width: var(--s8);
-  --install-decor-clip: var(--s7);
-  --install-decor-offset: calc(
-    -1 * (var(--install-decor-width) - var(--install-decor-clip))
+  --install-decor-width-m: var(--s6);
+  --install-decor-clip-m: var(--s3);
+  --install-decor-offset-m: calc(
+    -1 * (var(--install-decor-width-m) - var(--install-decor-clip-m))
+  );
+  --install-decor-width-l: var(--s8);
+  --install-decor-clip-l: var(--s7);
+  --install-decor-offset-l: calc(
+    -1 * (var(--install-decor-width-l) - var(--install-decor-clip-l))
   );
 }
 
@@ -52,16 +57,42 @@
     }
   }
 
+  .install.order-1 {
+    &:before {
+      content: " ";
+      position: absolute;
+
+      bottom: 50%;
+      left: var(--install-decor-offset-m);
+
+      height: var(--s8);
+      width: var(--install-decor-width-m);
+
+      border-top-width: 1px;
+      border-right-width: 0;
+      border-bottom-width: 1px;
+      border-left-width: 1px;
+      border-style: solid;
+
+      clip-path: polygon(
+        0 0,
+        100% 0,
+        calc(-1 * var(--install-decor-offset-m)) 100%,
+        0% 100%
+      );
+    }
+  }
+
   .install.order-2 {
     &:before {
       content: " ";
       position: absolute;
 
       bottom: 50%;
-      right: var(--install-decor-offset);
+      right: var(--install-decor-offset-m);
 
       height: var(--s8);
-      width: var(--install-decor-width);
+      width: var(--install-decor-width-m);
 
       border-top-width: 1px;
       border-right-width: 1px;
@@ -73,29 +104,39 @@
         0 0,
         100% 0,
         100% 100%,
-        var(--install-decor-clip) 100%
+        var(--install-decor-clip-m) 100%
+      );
+    }
+  }
+}
+
+@media (--large-viewport) {
+  .install.order-1 {
+    &:before {
+      left: var(--install-decor-offset-l);
+
+      width: var(--install-decor-width-l);
+      clip-path: polygon(
+        0 0,
+        100% 0,
+        var(--install-decor-clip-l) 100%,
+        0% 100%
       );
     }
   }
 
-  .install.order-1 {
+  .install.order-2 {
     &:before {
-      content: " ";
-      position: absolute;
+      right: var(--install-decor-offset-l);
 
-      bottom: 50%;
-      left: var(--install-decor-offset);
+      width: var(--install-decor-width-l);
 
-      height: var(--s8);
-      width: var(--install-decor-width);
-
-      border-top-width: 1px;
-      border-right-width: 0;
-      border-bottom-width: 1px;
-      border-left-width: 1px;
-      border-style: solid;
-
-      clip-path: polygon(0 0, 100% 0, var(--install-decor-clip) 100%, 0% 100%);
+      clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        var(--install-decor-clip-l) 100%
+      );
     }
   }
 }

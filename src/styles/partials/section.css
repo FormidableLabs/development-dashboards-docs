@@ -15,6 +15,11 @@
   /* good for light text on dark backgrounds */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @media (--medium-viewport) {
+    /* Leave extra pading for the decorative "Arm" */
+    padding: var(--s6) var(--s7);
+  }
 }
 
 .section__container {
@@ -41,6 +46,8 @@
   justify-content: space-between;
 
   margin-bottom: var(--s4);
+
+  text-align: left;
 }
 
 .section__header__title {

@@ -50,3 +50,8 @@ code,
 .code {
   font-family: "Menlo", "Consolas", "Courier", monospace;
 }
+
+#___gatsby {
+  /* If any of the decorative elements are too wide, just clip them */
+  overflow: hidden;
+}
