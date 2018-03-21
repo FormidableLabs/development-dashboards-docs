@@ -17,7 +17,7 @@ export default class Section extends React.Component {
     return (
       <section className={`section anchor${index + 1}`}>
         <div className="section__container">
-          <header className={`section__header section__header--${accent}`}>
+          <header className={`section__header border--${accent}`}>
             <h1 className="subtitle section__header__subtitle">{title}</h1>
             <span
               className={`title section__header__title ${accent}`}
