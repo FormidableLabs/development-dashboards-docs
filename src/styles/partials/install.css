@@ -45,6 +45,7 @@
     z-index: var(--z-base);
 
     &:before {
+      /* This ensures the Arm is underneath the figure and the content */
       z-index: var(--z-decrement);
 
       border-color: inherit;
@@ -52,9 +53,6 @@
   }
 
   .install.order-2 {
-    margin-left: var(--s5);
-
-    /* The 1px line 'arm' */
     &:before {
       content: " ";
       position: absolute;
@@ -81,9 +79,6 @@
   }
 
   .install.order-1 {
-    margin-right: var(--s5);
-
-    /* The 1px line 'arm' */
     &:before {
       content: " ";
       position: absolute;
