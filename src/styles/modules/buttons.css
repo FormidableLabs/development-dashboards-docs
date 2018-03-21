@@ -1,0 +1,23 @@
+.button {
+  cursor: pointer;
+
+  margin: 0;
+  padding: var(--s3) var(--s6);
+  position: relative;
+
+  background-clip: content-box;
+  border-width: 1px;
+  border-style: solid;
+  color: var(--white);
+  display: inline-block;
+  letter-spacing: var(--tracked);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.button--pink {
+  background: color(var(--pink) alpha(70%));
+  border: 1px solid var(--pink);
+}

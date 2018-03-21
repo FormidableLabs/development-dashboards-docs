@@ -5,17 +5,27 @@ export default class Install extends React.Component {
   static propTypes = {
     accent: PropTypes.string,
     children: PropTypes.node,
+    download: PropTypes.string,
     order: PropTypes.number
   };
 
+  static defaultProps = {
+    order: 2
+  };
+
   render() {
-    const { accent, children, order } = this.props;
+    const { accent, children, download, order } = this.props;
+    if (download) {
+      return (
+        <div className={`install order-${order}`}>
+          <a className={"subtitle button button--pink"} href={download}>
+            Download Now
+          </a>
+        </div>
+      );
+    }
     return (
-      <div
-        className={`install install--${
-          order ? "left" : "right"
-        } order-${order}`}
-      >
+      <div className={`install order-${order}`}>
         <code className={`install__code border--${accent}`}>{children}</code>
       </div>
     );

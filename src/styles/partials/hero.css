@@ -61,21 +61,6 @@
   }
 }
 
-.hero__button {
-  background: color(var(--pink) alpha(70%));
-  border: 1px solid var(--pink);
-  color: white;
-  cursor: pointer;
-  font-size: var(--s3);
-  font-weight: normal;
-  letter-spacing: var(--tracked);
-  margin: 0;
-  padding: var(--s3) var(--s6);
-  text-align: center;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
 .hero__content {
   margin: 0 auto;
   padding: 0;

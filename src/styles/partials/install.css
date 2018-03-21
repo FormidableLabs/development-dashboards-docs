@@ -3,11 +3,11 @@
 }
 
 @media (--medium-viewport) {
-  .install--right {
+  .install.order-2 {
     margin-left: var(--s5);
   }
 
-  .install--left {
+  .install.order-1 {
     margin-right: var(--s5);
   }
 }
