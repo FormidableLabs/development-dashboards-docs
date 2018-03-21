@@ -17,7 +17,7 @@ export default class Install extends React.Component {
     const { accent, children, download, order } = this.props;
     if (download) {
       return (
-        <div className={`install order-${order}`}>
+        <div className={`install border--${accent} order-${order}`}>
           <a className={`subtitle button button--${accent}`} href={download}>
             Download Now
           </a>
@@ -25,7 +25,7 @@ export default class Install extends React.Component {
       );
     }
     return (
-      <div className={`install order-${order}`}>
+      <div className={`install border--${accent} order-${order}`}>
         <code className={`install__code border--${accent}`}>{children}</code>
       </div>
     );

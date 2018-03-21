@@ -20,8 +20,87 @@
   display: inline-block;
   padding: var(--s3);
 
-  background-color: color(var(--black) alpha(25%));
+  background-color: var(--navy);
   border-width: 1px;
   border-style: solid;
   white-space: nowrap;
+}
+
+/*
+   Decoration: Arm
+*/
+
+:root {
+  --install-decor-width: var(--s8);
+  --install-decor-clip: var(--s7);
+  --install-decor-offset: calc(
+    -1 * (var(--install-decor-width) - var(--install-decor-clip))
+  );
+}
+
+@media (--medium-viewport) {
+  .install {
+    position: relative;
+
+    z-index: var(--z-base);
+
+    &:before {
+      z-index: var(--z-decrement);
+
+      border-color: inherit;
+    }
+  }
+
+  .install.order-2 {
+    margin-left: var(--s5);
+
+    /* The 1px line 'arm' */
+    &:before {
+      content: " ";
+      position: absolute;
+
+      bottom: 50%;
+      right: var(--install-decor-offset);
+
+      height: var(--s8);
+      width: var(--install-decor-width);
+
+      border-top-width: 1px;
+      border-right-width: 1px;
+      border-bottom-width: 1px;
+      border-left-width: 0;
+      border-style: solid;
+
+      clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        var(--install-decor-clip) 100%
+      );
+    }
+  }
+
+  .install.order-1 {
+    margin-right: var(--s5);
+
+    /* The 1px line 'arm' */
+    &:before {
+      content: " ";
+      position: absolute;
+
+      bottom: 50%;
+      left: var(--install-decor-offset);
+
+      height: var(--s8);
+      width: var(--install-decor-width);
+
+      border-top-width: 1px;
+      border-right-width: 0;
+      border-bottom-width: 1px;
+      border-left-width: 1px;
+      border-style: solid;
+
+      clip-path: polygon(0 0, 100% 0, var(--install-decor-clip) 100%, 0% 100%);
+    }
+  }
 }
