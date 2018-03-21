@@ -1,8 +1,14 @@
+:root {
+  --btn-spacing: var(--s3);
+}
+
 .button {
   cursor: pointer;
 
+  z-index: var(--z-base);
+
   margin: 0;
-  padding: var(--s3) var(--s6);
+  padding: calc(2 * var(--btn-spacing)) var(--s6);
   position: relative;
 
   background-clip: content-box;
@@ -10,14 +16,90 @@
   border-style: solid;
   color: var(--white);
   display: inline-block;
+  font-size: var(--s3);
   letter-spacing: var(--tracked);
   text-align: center;
   text-decoration: none;
+  text-shadow: 1px 1px 0 color(var(--navy) alpha(70%));
   text-transform: uppercase;
   white-space: nowrap;
+
+  &:before {
+    content: "";
+
+    position: absolute;
+    top: var(--btn-spacing);
+    right: var(--btn-spacing);
+    bottom: var(--btn-spacing);
+    left: var(--btn-spacing);
+
+    z-index: var(--z-decrement);
+
+    border-width: 1px;
+    border-style: solid;
+  }
 }
 
-.button--pink {
+/*
+  Modifier: Hero
+
+  do not display outside borders
+*/
+.button--hero {
+  padding: var(--btn-spacing) var(--s6);
+
   background: color(var(--pink) alpha(70%));
   border: 1px solid var(--pink);
+
+  &:before {
+    display: none;
+  }
+}
+
+/* 
+  Modifiers: Color
+*/
+.button--pink {
+  border-color: var(--pink);
+
+  &:before {
+    background-color: color(var(--pink) alpha(70%));
+    border-color: var(--pink);
+  }
+}
+
+.button--orange {
+  border-color: var(--orange);
+
+  &:before {
+    background-color: color(var(--orange) alpha(70%));
+    border-color: var(--orange);
+  }
+}
+
+.button--yellow {
+  border-color: var(--yellow);
+
+  &:before {
+    background-color: color(var(--yellow) alpha(70%));
+    border-color: var(--yellow);
+  }
+}
+
+.button--green {
+  border-color: var(--green);
+
+  &:before {
+    background-color: color(var(--green) alpha(70%));
+    border-color: var(--green);
+  }
+}
+
+.button--blue {
+  border-color: var(--blue);
+
+  &:before {
+    background-color: color(var(--blue) alpha(70%));
+    border-color: var(--blue);
+  }
 }

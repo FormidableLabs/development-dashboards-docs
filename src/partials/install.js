@@ -18,7 +18,7 @@ export default class Install extends React.Component {
     if (download) {
       return (
         <div className={`install order-${order}`}>
-          <a className={"subtitle button button--pink"} href={download}>
+          <a className={`subtitle button button--${accent}`} href={download}>
             Download Now
           </a>
         </div>
