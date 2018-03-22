@@ -41,6 +41,13 @@ class HTML extends Component {
           />
           <link
             rel="apple-touch-icon"
+            sizes="167x167"
+            href={`${
+              siteMetadata.rssMetadata.site_url
+            }/favicons/apple-touch-icon.png`}
+          />
+          <link
+            rel="apple-touch-icon"
             sizes="180x180"
             href={`${
               siteMetadata.rssMetadata.site_url
