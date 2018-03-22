@@ -58,13 +58,13 @@ class Layout extends React.Component {
           <title>{config.siteTitle}</title>
           <meta name="description" content={config.siteDescription} />
         </Helmet>
-        <header className="Layout-Header bg-navy white pa5">
+        <header className="header bg-navy white">
           <a href="https://formidable.com">
             <span dangerouslySetInnerHTML={{ __html: FORMIDABLELOGO }} />
           </a>
         </header>
         {children()}
-        <Footer theme="light" />
+        <Footer theme="light" className="footer" styleContainer="footer" />
       </div>
     );
   }

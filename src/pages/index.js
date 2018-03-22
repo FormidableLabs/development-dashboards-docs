@@ -14,12 +14,14 @@ export default class Index extends React.Component {
   render() {
     return (
       <main>
+        <Nav />
         <Hero />
         <Section
           title="Webpack Dashboard"
           accent="pink"
           index={1}
-          hero={IMAGE_WEBPACK}
+          image={IMAGE_WEBPACK}
+          github="https://github.com/FormidableLabs/webpack-dashboard"
         >
           <p className="para order-2">
             A CLI dashboard for your webpack-dev-server, webpack-dashboard
@@ -34,7 +36,8 @@ export default class Index extends React.Component {
           title="Webpack Electron Dashboard"
           accent="orange"
           index={2}
-          hero={IMAGE_WEBPACK_ELECTRON}
+          image={IMAGE_WEBPACK_ELECTRON}
+          github="https://github.com/FormidableLabs/electron-webpack-dashboard"
         >
           <p className="para">
             electron-webpack-dashboard, an Electron desktop GUI, enhances
@@ -42,15 +45,17 @@ export default class Index extends React.Component {
             No need to configure your terminal- just download, drop a couple of
             snippets into your build, and you’re ready to go.
           </p>
-          <div className="install install--left">
-            <button>download now</button>
-          </div>
+          <Install
+            accent="orange"
+            download="https://github.com/FormidableLabs/electron-webpack-dashboard/releases/latest"
+          />
         </Section>
         <Section
           title="InspectPack"
           accent="yellow"
           index={3}
-          hero={IMAGE_INSPECTPACK}
+          image={IMAGE_INSPECTPACK}
+          github="https://github.com/FormidableLabs/inspectpack"
         >
           <p className="para">
             inspectpack is an inspection tool for webpack JavaScript bundles
@@ -65,7 +70,8 @@ export default class Index extends React.Component {
           title="Node.js Dashboard"
           accent="green"
           index={4}
-          hero={IMAGE_NODE_JS}
+          image={IMAGE_NODE_JS}
+          github="https://github.com/FormidableLabs/nodejs-dashboard"
         >
           <p className="para order-2">
             A telemetry dashboard for Node.js apps that runs in real time to
@@ -76,7 +82,6 @@ export default class Index extends React.Component {
             npm install -g nodejs-dashboard
           </Install>
         </Section>
-        <Nav />
       </main>
     );
   }

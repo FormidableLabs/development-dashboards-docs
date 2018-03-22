@@ -43,17 +43,14 @@
   MODULES
   functional classes based on http://tachyons.io/
 
+  buttons:    button looks
   colors:     color, background-color, border-color
   flex:       flexbox
 
 */
+@import "./modules/buttons.css";
 @import "./modules/colors.css";
-@import "./modules/flex.css";
-@import "./modules/height.css";
-
-.Layout-Header {
-  height: 100px;
-}
+@import "./modules/layout.css";
 
 /*
 
