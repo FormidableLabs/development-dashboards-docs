@@ -1,5 +1,5 @@
 .install {
-  margin-bottom: var(--s4);
+  margin: 0 auto var(--s4);
 }
 
 @media (--medium-viewport) {

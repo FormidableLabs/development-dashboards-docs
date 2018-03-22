@@ -1,6 +1,6 @@
 .section {
   margin-bottom: var(--s5);
-  padding: var(--s6) var(--s3);
+  padding: var(--s6) var(--s5);
 
   background-color: var(--light-navy);
   background-image: linear-gradient(
@@ -65,12 +65,14 @@
   flex-wrap: nowrap;
   justify-content: center;
 
-  margin-bottom: var(--s5);
+  margin: 0 auto var(--s5);
+  max-width: var(--s9);
 
   text-align: left;
 
   @media (--medium-viewport) {
     flex-direction: row;
+    max-width: initial;
     padding: 0 var(--s1);
   }
 }
@@ -101,46 +103,48 @@
 /*
     Decoration: Outlined Circle & "Arm"
 */
-.section__header {
-  position: relative;
+@media (--medium-viewport) {
+  .section__header {
+    position: relative;
 
-  /* Circle */
-  &:after {
-    content: " ";
-    position: absolute;
+    /* Circle */
+    &:after {
+      content: " ";
+      position: absolute;
 
-    top: 50%;
-    left: calc(-1 * var(--s4));
+      top: 50%;
+      left: calc(-1 * var(--s4));
 
-    transform: translateY(-50%);
+      transform: translateY(-50%);
 
-    height: var(--s2);
-    width: var(--s2);
+      height: var(--s2);
+      width: var(--s2);
 
-    border-color: inherit;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: var(--s6);
-  }
+      border-color: inherit;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: var(--s6);
+    }
 
-  /* "Arm" */
-  &:before {
-    content: " ";
-    position: absolute;
+    /* "Arm" */
+    &:before {
+      content: " ";
+      position: absolute;
 
-    top: 50%;
-    left: calc(-2 * var(--s4));
+      top: 50%;
+      left: calc(-2 * var(--s4));
 
-    height: var(--s8);
-    width: var(--s6);
+      height: var(--s8);
+      width: var(--s6);
 
-    border-color: inherit;
-    border-top-width: 1px;
-    border-right-width: 0;
-    border-bottom-width: 1px;
-    border-left-width: 1px;
-    border-style: solid;
+      border-color: inherit;
+      border-top-width: 1px;
+      border-right-width: 0;
+      border-bottom-width: 1px;
+      border-left-width: 1px;
+      border-style: solid;
 
-    clip-path: polygon(0 0, var(--s4) 0, 100% 100%, 0% 100%);
+      clip-path: polygon(0 0, var(--s4) 0, 100% 100%, 0% 100%);
+    }
   }
 }
