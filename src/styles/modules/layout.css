@@ -1,0 +1,31 @@
+/*
+
+   LAYOUT
+
+*/
+.header {
+  height: 100px;
+  padding: var(--s5);
+}
+
+.footer {
+  padding: 0 var(--s5);
+}
+
+/* Override <Footer> from 'formidable-landers' classes */
+.formidableFooter-container {
+  margin: 0 auto;
+  max-width: var(--s11);
+}
+/* 
+    Flex Ordering 
+*/
+.order-0 {
+  order: 0;
+}
+.order-1 {
+  order: 1;
+}
+.order-2 {
+  order: 2;
+}

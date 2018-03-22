@@ -14,6 +14,7 @@ export default class Index extends React.Component {
   render() {
     return (
       <main>
+        <Nav />
         <Hero />
         <Section
           title="Webpack Dashboard"
@@ -46,7 +47,7 @@ export default class Index extends React.Component {
           </p>
           <Install
             accent="orange"
-            download="https://github.com/FormidableLabs/electron-webpack-dashboard/releases/tag/v1.0.0"
+            download="https://github.com/FormidableLabs/electron-webpack-dashboard/releases/latest"
           />
         </Section>
         <Section
@@ -81,7 +82,6 @@ export default class Index extends React.Component {
             npm install -g nodejs-dashboard
           </Install>
         </Section>
-        <Nav />
       </main>
     );
   }

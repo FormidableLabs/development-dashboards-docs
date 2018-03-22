@@ -33,7 +33,12 @@ export default class Section extends React.Component {
           )}
           <div className="section__content">{children}</div>
           {github && (
-            <a href={github} className={`subtitle button button--${accent}`}>
+            <a
+              href={github}
+              className={`subtitle button button--${accent}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               github
             </a>
           )}
