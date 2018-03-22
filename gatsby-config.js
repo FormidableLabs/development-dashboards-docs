@@ -11,7 +11,7 @@ module.exports = {
       feed_url: config.siteUrl + pathPrefix + config.siteRss,
       title: config.siteTitle,
       description: config.siteDescription,
-      image_url: `${config.siteUrl + pathPrefix}/logos/favicon.ico`,
+      image_url: `${config.siteUrl + pathPrefix}/favicons/favicon.ico`,
       copyright: config.copyright
     }
   },
