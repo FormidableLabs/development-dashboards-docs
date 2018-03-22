@@ -2,7 +2,7 @@
 module.exports = {
   siteTitle: "Development Dashboards", // Site title.
   siteTitleAlt: "", // Alternative site title for SEO.
-  siteLogo: "/logos/favicon.ico", // Logo used for SEO and manifest.
+  siteLogo: "/favicons/favicon.ico", // Logo used for SEO and manifest.
   siteUrl: "https://formidable.com", // Domain of your website without pathPrefix.
   pathPrefix: "/open-source/development-dashboards", // Prefixes all links when deployed (amazing).
   googleAnalyticsID: "UA-43290258-1", // GA tracking ID.

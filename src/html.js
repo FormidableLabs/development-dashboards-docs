@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import lazer84woff from "../static/fonts/lazer84.woff";
 import lazer84woff2 from "../static/fonts/lazer84.woff2";
+import { siteMetadata } from "../gatsby-config";
 
 let stylesStr;
 if (process.env.NODE_ENV === "production") {
@@ -34,9 +35,56 @@ class HTML extends Component {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
           {this.props.headComponents}
-          {/* TODO: Add favicon
-            <link rel="shortcut icon" href={favicon} />
-          */}
+          <link
+            rel="shortcut icon"
+            href={`${siteMetadata.rssMetadata.site_url}/favicons/favicon.ico`}
+          />
+          <link
+            rel="apple-touch-icon"
+            sizes="167x167"
+            href={`${
+              siteMetadata.rssMetadata.site_url
+            }/favicons/apple-touch-icon.png`}
+          />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href={`${
+              siteMetadata.rssMetadata.site_url
+            }/favicons/apple-touch-icon.png`}
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href={`${
+              siteMetadata.rssMetadata.site_url
+            }/favicons/favicon-32x32.png`}
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href={`${
+              siteMetadata.rssMetadata.site_url
+            }/favicons/favicon-16x16.png`}
+          />
+          <link
+            rel="manifest"
+            href={`${
+              siteMetadata.rssMetadata.site_url
+            }/favicons/site.webmanifest`}
+          />
+          <link
+            rel="mask-icon"
+            href={`${
+              siteMetadata.rssMetadata.site_url
+            }/favicons/safari-pinned-tab.svg`}
+            color="#f038b3"
+          />
+          <meta name="msapplication-TileColor" content="#f038b3" />
+          <meta name="theme-color" content="#ffffff" />
+
           {/* Fonts */}
           <link rel="preload" href={lazer84woff} as="font" />
           <link rel="preload" href={lazer84woff2} as="font" />
