@@ -34,7 +34,7 @@
 
     z-index: var(--z-decrement);
 
-    border-width: 1px;
+    border-width: 2px;
     border-style: solid;
   }
 }
@@ -48,7 +48,7 @@
   padding: var(--btn-spacing) var(--s6);
 
   background: color(var(--pink) alpha(70%));
-  border: 1px solid var(--pink);
+  border: 2px solid var(--pink);
 
   &:before {
     display: none;
