@@ -9,7 +9,7 @@
 }
 
 .footer {
-  padding: 0 var(--s5);
+  padding: 0 var(--s5) var(--s6);
 }
 
 /* Override <Footer> from 'formidable-landers' classes */

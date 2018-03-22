@@ -1,29 +1,74 @@
+/*
+    NAV
+
+    Default (mobile): Nav is at the bottom with large touch targets
+
+    > medium-viewport: Nav is at the right with small targets
+
+*/
 .nav {
   position: fixed;
-  top: 50%;
   right: 0;
+  bottom: 0;
+  left: 0;
 
-  padding: var(--s3) var(--s5) var(--s3) var(--s3);
-  transform: translateY(-50%);
+  padding: var(--s5) var(--s5) var(--s3) var(--s3);
 
   z-index: var(--z-increment);
 
+  /* Ease the linear gradient */
+  background-image: linear-gradient(
+    0deg,
+    var(--dark-navy),
+    50%,
+    color(var(--dark-navy) alpha(50%)) 65%,
+    82%,
+    transparent
+  );
+
   @media (--medium-viewport) {
+    top: 50%;
     right: var(--s3);
+    bottom: auto;
+    left: auto;
+
+    padding: var(--s3) var(--s5) var(--s3) var(--s3);
+    transform: translateY(-50%);
+
+    background-image: none;
   }
 }
 
 .nav__list {
-  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin: 0 var(--s3);
   padding: 0;
 
   list-style: none;
+
+  @media (--medium-viewport) {
+    margin: 0;
+    display: block;
+  }
 }
 
 .nav__list__item {
-  margin-top: var(--s5);
-  padding: var(--s2);
+  margin-right: var(--s5);
+  padding: var(--s4);
   position: relative;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (--medium-viewport) {
+    margin-top: var(--s5);
+    margin-right: 0;
+    padding: var(--s2);
+  }
 }
 
 .nav__list__item:first-child {
@@ -43,7 +88,8 @@
 /* Circle/Dot */
 :root {
   /* The spacing between the border and the dot */
-  --nav-dot-spacing: calc(0.5 * var(--s3));
+  --nav-dot-spacing: calc(0.5 * var(--s5));
+  --nav-dot-spacing-m: calc(0.5 * var(--s3));
 }
 .nav__link:after {
   content: " ";
@@ -51,9 +97,9 @@
   top: calc(-1 * var(--nav-dot-spacing));
   left: calc(-1 * var(--nav-dot-spacing));
 
-  height: var(--s3);
+  height: var(--s5);
   padding: var(--nav-dot-spacing);
-  width: var(--s3);
+  width: var(--s5);
 
   background-color: var(--white);
   background-clip: content-box;
@@ -61,6 +107,12 @@
   border-style: solid;
   border-color: transparent;
   border-radius: 50%;
+
+  @media (--medium-viewport) {
+    height: var(--s3);
+    padding: var(--nav-dot-spacing-m);
+    width: var(--s3);
+  }
 }
 
 /* On hover and when active, show the border */
