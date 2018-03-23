@@ -7,7 +7,7 @@ import Hero from "../partials/hero";
 import IMAGE_WEBPACK from "../assets/product_webpack.png";
 import IMAGE_NODE_JS from "../assets/product_nodejs.png";
 import IMAGE_INSPECTPACK from "../assets/product_inspectpack.jpg";
-import IMAGE_WEBPACK_ELECTRON from "../assets/product_webpackelectron.jpg";
+import IMAGE_ELECTRON_WEBPACK from "../assets/product_webpackelectron.jpg";
 
 // Home page
 export default class Index extends React.Component {
@@ -33,10 +33,10 @@ export default class Index extends React.Component {
           </Install>
         </Section>
         <Section
-          title="Webpack Electron Dashboard"
+          title="Electron Webpack Dashboard"
           accent="orange"
           index={2}
-          image={IMAGE_WEBPACK_ELECTRON}
+          image={IMAGE_ELECTRON_WEBPACK}
           github="https://github.com/FormidableLabs/electron-webpack-dashboard"
         >
           <p className="para">
