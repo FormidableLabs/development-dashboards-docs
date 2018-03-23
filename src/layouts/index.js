@@ -56,7 +56,6 @@ class Layout extends React.Component {
       <div>
         <Helmet>
           <title>{config.siteTitle}</title>
-          <meta name="description" content={config.siteDescription} />
         </Helmet>
         <header className="header bg-navy white">
           <a href="https://formidable.com">

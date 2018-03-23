@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import lazer84woff from "../static/fonts/lazer84.woff";
-import lazer84woff2 from "../static/fonts/lazer84.woff2";
-import { siteMetadata } from "../gatsby-config";
+import { withPrefix } from "gatsby-link";
+
+import WOFF_LAZER84 from "./assets/fonts/lazer84.woff";
+import WOFF2_LAZER84 from "./assets/fonts/lazer84.woff2";
+import WOFF_EXO2 from "./assets/fonts/exo2.woff";
+import WOFF2_EXO2 from "./assets/fonts/exo2.woff2";
+import IMAGE_BG_SPACE from "./assets/bg-space.jpg";
 
 let stylesStr;
 if (process.env.NODE_ENV === "production") {
@@ -37,66 +41,56 @@ class HTML extends Component {
           {this.props.headComponents}
           <link
             rel="shortcut icon"
-            href={`${siteMetadata.rssMetadata.site_url}/favicons/favicon.ico`}
+            href={withPrefix("/favicons/favicon.ico")}
           />
           <link
             rel="apple-touch-icon"
             sizes="167x167"
-            href={`${
-              siteMetadata.rssMetadata.site_url
-            }/favicons/apple-touch-icon.png`}
+            href={withPrefix("/favicons/apple-touch-icon.png")}
           />
           <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href={`${
-              siteMetadata.rssMetadata.site_url
-            }/favicons/apple-touch-icon.png`}
+            href={withPrefix("/favicons/apple-touch-icon.png")}
           />
           <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href={`${
-              siteMetadata.rssMetadata.site_url
-            }/favicons/favicon-32x32.png`}
+            href={withPrefix("/favicons/favicon-32x32.png")}
           />
           <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href={`${
-              siteMetadata.rssMetadata.site_url
-            }/favicons/favicon-16x16.png`}
+            href={withPrefix("/favicons/favicon-16x16.png")}
           />
           <link
             rel="manifest"
-            href={`${
-              siteMetadata.rssMetadata.site_url
-            }/favicons/site.webmanifest`}
+            href={withPrefix("/favicons/site.webmanifest")}
           />
           <link
             rel="mask-icon"
-            href={`${
-              siteMetadata.rssMetadata.site_url
-            }/favicons/safari-pinned-tab.svg`}
+            href={withPrefix("/favicons/safari-pinned-tab.svg")}
             color="#f038b3"
           />
           <meta name="msapplication-TileColor" content="#f038b3" />
           <meta name="theme-color" content="#ffffff" />
 
           {/* Fonts */}
-          <link rel="preload" href={lazer84woff} as="font" />
-          <link rel="preload" href={lazer84woff2} as="font" />
+          <link rel="preload" href={WOFF_LAZER84} as="font" />
+          <link rel="preload" href={WOFF2_LAZER84} as="font" />
+          <link rel="preload" href={WOFF_EXO2} as="font" />
+          <link rel="preload" href={WOFF2_EXO2} as="font" />
           <link
             preload
-            href="https://fonts.googleapis.com/css?family=Exo:400,400i|Montserrat:400,700"
+            href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
             rel="stylesheet"
           />
           {/* Preload hero image */}
           <link
             rel="preload"
-            href="./static/bg-space.png"
+            href={IMAGE_BG_SPACE}
             as="image"
             type="image/png"
           />
