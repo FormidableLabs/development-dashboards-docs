@@ -1,16 +1,19 @@
 {
-  "name": "development-dashboard-docs",
+  "name": "development-dashboards-docs",
   "description": "Formidable Open Source Development Dashboards Documentation",
   "version": "2.0.2",
   "author": "Formidable <hello@formidable.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FormidableLabs/development-dashboards-docs.git"
+    "url":
+      "git+https://github.com/FormidableLabs/development-dashboards-docs.git"
   },
   "bugs": {
-    "url": "https://github.com/FormidableLabs/development-dashboards-docs/issues"
+    "url":
+      "https://github.com/FormidableLabs/development-dashboards-docs/issues"
   },
-  "homepage": "https://github.com/FormidableLabs/development-dashboards-docs#readme",
+  "homepage":
+    "https://github.com/FormidableLabs/development-dashboards-docs#readme",
   "dependencies": {
     "fontfaceobserver": "^2.0.13",
     "formidable-landers": "^7.1.1",
@@ -39,7 +42,8 @@
     "react-scroll": "^1.7.7",
     "react-share": "^1.15.1",
     "react-twitter-widgets": "^1.4.0",
-    "webpack-dashboard": "git://github.com/FormidableLabs/webpack-dashboard.git#master"
+    "webpack-dashboard":
+      "git://github.com/FormidableLabs/webpack-dashboard.git#master"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
@@ -64,12 +68,7 @@
     "stylelint": "^8.0.0",
     "stylelint-config-standard": "^17.0.0"
   },
-  "keywords": [
-    "gatsby",
-    "development dashboards",
-    "webpack dashboard",
-    "docs"
-  ],
+  "keywords": ["gatsby", "development dashboards", "webpack dashboard", "docs"],
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
@@ -89,15 +88,11 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
+        "<rootDir>/__mocks__/fileMock.js",
       "^(?!.*\\.module\\.css$).*\\.css$": "<rootDir>/__mocks__/styleMock.js"
     },
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "<rootDir>/.cache/"
-    ],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ]
+    "testPathIgnorePatterns": ["/node_modules/", "<rootDir>/.cache/"],
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
   }
 }
