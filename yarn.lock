@@ -8997,16 +8997,6 @@ postcss-inline-svg@^2.2.0:
     postcss "^5.0.14"
     postcss-value-parser "^3.2.3"
 
-postcss-inline-svg@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.npmjs.org/postcss-inline-svg/-/postcss-inline-svg-3.0.0.tgz#195da9f5487bf8f183b03f8a2a843b060ff00525"
-  dependencies:
-    css-select "^1.2.0"
-    dom-serializer "^0.1.0"
-    htmlparser2 "^3.9.0"
-    postcss "^6.0.1"
-    postcss-value-parser "^3.2.3"
-
 postcss-less@^0.14.0:
   version "0.14.0"
   resolved "https://registry.npmjs.org/postcss-less/-/postcss-less-0.14.0.tgz#c631b089c6cce422b9a10f3a958d2bedd3819324"
