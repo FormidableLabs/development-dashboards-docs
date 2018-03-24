@@ -12,11 +12,11 @@ import "../styles/styles.css";
 class Layout extends React.Component {
   componentDidMount() {
     // "Flash of Faux Text": Add class to body once font is loaded
-    const lazer84Observer = new FontFaceObserver("Lazer84", {
+    const lazer84Observer = new FontFaceObserver("lazer84", {
       style: "italic"
     });
     const montserratObserver = new FontFaceObserver("Montserrat");
-    const exoObserver = new FontFaceObserver("Exo");
+    const exoObserver = new FontFaceObserver("exo");
 
     lazer84Observer
       .load()
