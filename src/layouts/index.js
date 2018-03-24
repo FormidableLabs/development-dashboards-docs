@@ -7,7 +7,13 @@ import { Footer } from "formidable-landers";
 import config from "../../data/site-config";
 import FORMIDABLELOGO from "../assets/formidable.svg";
 
-import "../styles/styles.css";
+// Fix https://github.com/gatsbyjs/gatsby/issues/1086#issuecomment-324605081
+if (
+  process.env.NODE_ENV === "development" ||
+  (process.env.NODE_ENV === "production" && process.browser !== true)
+) {
+  require("../styles/styles.css");
+}
 
 class Layout extends React.Component {
   componentDidMount() {
