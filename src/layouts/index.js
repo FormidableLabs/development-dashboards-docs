@@ -7,16 +7,22 @@ import { Footer } from "formidable-landers";
 import config from "../../data/site-config";
 import FORMIDABLELOGO from "../assets/formidable.svg";
 
-import "../styles/styles.css";
+// Fix https://github.com/gatsbyjs/gatsby/issues/1086#issuecomment-324605081
+if (
+  process.env.NODE_ENV === "development" ||
+  (process.env.NODE_ENV === "production" && process.browser !== true)
+) {
+  require("../styles/styles.css");
+}
 
 class Layout extends React.Component {
   componentDidMount() {
     // "Flash of Faux Text": Add class to body once font is loaded
-    const lazer84Observer = new FontFaceObserver("Lazer84", {
+    const lazer84Observer = new FontFaceObserver("lazer84", {
       style: "italic"
     });
     const montserratObserver = new FontFaceObserver("Montserrat");
-    const exoObserver = new FontFaceObserver("Exo");
+    const exoObserver = new FontFaceObserver("exo");
 
     lazer84Observer
       .load()
