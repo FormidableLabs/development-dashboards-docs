@@ -31,14 +31,33 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-plugin-nprogress",
+      resolve: "gatsby-plugin-manifest",
       options: {
-        color: config.themeColor
+        name: "Formidable Development Dashboards",
+        short_name: "Dev Dashboards",
+        start_url: "/",
+        background_color: "#ffffff",
+        theme_color: "#ffffff",
+        display: "standalone",
+        icons: [
+          {
+            // Everything in /static will be copied to an equivalent
+            // directory in /public during development and build, so
+            // assuming your favicons are in /static/favicons,
+            // you can reference them here
+            src: "/favicons/android-chrome-192x192.png",
+            sizes: "192x192",
+            type: "image/png"
+          },
+          {
+            src: "/favicons/android-chrome-256x256.png",
+            sizes: "256x256",
+            type: "image/png"
+          }
+        ]
       }
     },
-    "gatsby-plugin-catch-links",
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-sitemap"
+    "gatsby-plugin-sharp"
   ]
 };
 /* eslint-enable camelcase */

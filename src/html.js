@@ -66,10 +66,6 @@ class HTML extends Component {
             href={withPrefix("/favicons/favicon-16x16.png")}
           />
           <link
-            rel="manifest"
-            href={withPrefix("/favicons/site.webmanifest")}
-          />
-          <link
             rel="mask-icon"
             href={withPrefix("/favicons/safari-pinned-tab.svg")}
             color="#f038b3"
