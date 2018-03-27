@@ -51,6 +51,10 @@
 }
 
 .section__header__title {
+  padding-left: var(
+    --s3
+  ); /* Safari clips the large number without this /shrug */
+
   letter-spacing: var(--tracked-mega);
 }
 
