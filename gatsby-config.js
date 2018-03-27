@@ -30,13 +30,6 @@ module.exports = {
         trackingId: config.googleAnalyticsID
       }
     },
-    {
-      resolve: "gatsby-plugin-nprogress",
-      options: {
-        color: config.themeColor
-      }
-    },
-    "gatsby-plugin-catch-links",
     "gatsby-plugin-sharp",
     "gatsby-plugin-sitemap"
   ]
