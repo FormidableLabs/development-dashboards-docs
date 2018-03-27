@@ -30,8 +30,7 @@ module.exports = {
         trackingId: config.googleAnalyticsID
       }
     },
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-sitemap"
+    "gatsby-plugin-sharp"
   ]
 };
 /* eslint-enable camelcase */
