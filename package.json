@@ -24,7 +24,6 @@
     "gatsby-plugin-sharp": "^1.6.7",
     "gatsby-source-filesystem": "^1.4.2",
     "lodash": "^4.17.4",
-    "nodejs-dashboard": "^0.4.3",
     "prop-types": "^15.5.8",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
@@ -32,9 +31,7 @@
     "react-live": "^1.7.1",
     "react-scroll": "^1.7.7",
     "react-share": "^1.15.1",
-    "react-twitter-widgets": "^1.4.0",
-    "webpack-dashboard":
-      "git://github.com/FormidableLabs/webpack-dashboard.git#master"
+    "react-twitter-widgets": "^1.4.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
