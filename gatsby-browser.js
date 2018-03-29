@@ -1,4 +1,4 @@
-import FontFaceObserver from "fontfaceobserver";
+const FontFaceObserver = require("fontfaceobserver");
 
 exports.onClientEntry = () => {
   // Called when the Gatsby browser runtime first starts.
