@@ -16,7 +16,6 @@ export default class Nav extends React.Component {
               className="nav__link"
               activeClass="is-active"
               duration={500}
-              hashSpy
               smooth
               spy
               to="anchor1"
@@ -29,7 +28,6 @@ export default class Nav extends React.Component {
               className="nav__link"
               activeClass="is-active"
               duration={500}
-              hashSpy
               smooth
               spy
               to="anchor2"
@@ -42,7 +40,6 @@ export default class Nav extends React.Component {
               className="nav__link"
               activeClass="is-active"
               duration={500}
-              hashSpy
               smooth
               spy
               to="anchor3"
@@ -55,7 +52,6 @@ export default class Nav extends React.Component {
               className="nav__link"
               activeClass="is-active"
               duration={500}
-              hashSpy
               smooth
               spy
               to="anchor4"
@@ -68,7 +64,6 @@ export default class Nav extends React.Component {
               className="nav__link"
               activeClass="is-active"
               duration={500}
-              hashSpy
               smooth
               spy
               to="anchor5"
