@@ -25,6 +25,12 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-plugin-postcss-sass",
+      options: {
+        postCssPlugins: [require("postcss-url")({ url: "inline" })]
+      }
+    },
+    {
       resolve: "gatsby-plugin-google-analytics",
       options: {
         trackingId: config.googleAnalyticsID
