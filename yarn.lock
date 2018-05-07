@@ -4341,8 +4341,8 @@ form-data@~2.3.1:
     mime-types "^2.1.12"
 
 formidable-landers@^8.1.1:
-  version "8.1.4"
-  resolved "https://registry.yarnpkg.com/formidable-landers/-/formidable-landers-8.1.4.tgz#637002f76c7699633b1c3ba08c5fdd85684afd13"
+  version "8.1.5"
+  resolved "https://registry.yarnpkg.com/formidable-landers/-/formidable-landers-8.1.5.tgz#5cc8752b274afe6d628a9b50540fef0a1f0be82e"
   dependencies:
     babel-cli "^6.26.0"
     babel-core "^6.26.3"
