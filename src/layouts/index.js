@@ -2,9 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { Header, Footer } from "formidable-landers";
-
 import config from "../../data/site-config";
-import FORMIDABLELOGO from "../assets/formidable.svg";
 
 // Fix https://github.com/gatsbyjs/gatsby/issues/1086#issuecomment-324605081
 if (
