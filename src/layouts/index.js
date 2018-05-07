@@ -21,7 +21,7 @@ class Layout extends React.Component {
         <Helmet>
           <title>{config.siteTitle}</title>
         </Helmet>
-        <Header />
+        <Header subheader={false} />
         {children()}
         <Footer theme="light" className="footer" styleContainer="footer" />
       </div>
