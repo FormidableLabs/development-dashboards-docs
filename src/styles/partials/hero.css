@@ -3,16 +3,16 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: flex-end;
 
-  height: 70vh;
+  height: 75vh;
   margin-bottom: var(--s5);
   min-height: 600px;
-  padding: var(--s6) var(--s1);
+  padding: var(--s7a) var(--s1);
   position: relative;
 
   background-color: var(--navy);
-  background-image: url("../../assets/bg-space.jpg");
+  background-image: url('../../assets/bg-space.jpg');
   background-size: cover;
   border-top: 1px solid color(var(--white) alpha(15%));
   border-bottom: 1px solid color(var(--white) alpha(15%));
@@ -90,7 +90,7 @@
 .hero__header {
   /* Top left and top right vertical pieces (| |) of Corners */
   &:before {
-    content: " ";
+    content: ' ';
 
     position: absolute;
     top: var(--hero-corner-width-offset);
@@ -105,7 +105,7 @@
 
   /* Top left and top right horizontal pieces (_ _) of Corners */
   &:after {
-    content: " ";
+    content: ' ';
 
     position: absolute;
     top: var(--hero-corner-width-offset);
@@ -128,7 +128,7 @@
 @media (--small-viewport) {
   .hero__footer__decor {
     &:after {
-      content: " ";
+      content: ' ';
 
       position: absolute;
       bottom: var(--hero-corner-width-offset);
@@ -223,7 +223,7 @@
 
   /* Inside Borders */
   &:before {
-    content: " ";
+    content: ' ';
 
     position: absolute;
     top: 0;
@@ -270,7 +270,7 @@
 
   /* Bottom Left & Bottom Right borders of button */
   &:before {
-    content: " ";
+    content: ' ';
     position: absolute;
 
     top: calc(var(--footer-decor-height) - 2px);
@@ -291,7 +291,7 @@
     position: relative;
 
     &:before {
-      content: " ";
+      content: ' ';
 
       position: absolute;
       top: 0;
@@ -315,7 +315,7 @@
   .hero__content {
     /* Top two dots */
     &:after {
-      content: " ";
+      content: ' ';
 
       position: absolute;
       top: calc(var(--s2) / -2.25);
@@ -333,7 +333,7 @@
   .hero__footer {
     /* Bottom right three dots */
     &:before {
-      content: " ";
+      content: ' ';
 
       position: absolute;
       right: calc(var(--s2) / -2.25);
@@ -344,8 +344,7 @@
 
       background-color: var(--pink);
       border-radius: var(--s3);
-      box-shadow: 0 calc(-1 * var(--s3)) 0 0 var(--pink),
-        0 calc(-2 * var(--s3)) 0 0 var(--pink);
+      box-shadow: 0 calc(-1 * var(--s3)) 0 0 var(--pink), 0 calc(-2 * var(--s3)) 0 0 var(--pink);
     }
   }
 }

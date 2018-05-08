@@ -1,10 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import { Footer } from "formidable-landers";
-
+import { Header, Footer } from "formidable-landers";
 import config from "../../data/site-config";
-import FORMIDABLELOGO from "../assets/formidable.svg";
 
 // Fix https://github.com/gatsbyjs/gatsby/issues/1086#issuecomment-324605081
 if (
@@ -23,11 +21,7 @@ class Layout extends React.Component {
         <Helmet>
           <title>{config.siteTitle}</title>
         </Helmet>
-        <header className="header bg-navy white">
-          <a href="https://formidable.com">
-            <span dangerouslySetInnerHTML={{ __html: FORMIDABLELOGO }} />
-          </a>
-        </header>
+        <Header subheader={false} />
         {children()}
         <Footer theme="light" className="footer" styleContainer="footer" />
       </div>
