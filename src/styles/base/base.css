@@ -8,12 +8,25 @@ html {
   color: var(--white);
 }
 
-main {
+html {
   font-size: 12px;
 
   @media (--small-viewport) {
     font-size: var(--base);
   }
+}
+
+/* Reset specifically for the formidable-landers header */
+.site-header {
+  font-size: 17.6px;
+  @media (--small-viewport) {
+    font-size: 17.6px;
+  }
+}
+/* end formidable-landers hack */
+
+main {
+  padding-top: 6vh;
 }
 
 /* single direction margins */
