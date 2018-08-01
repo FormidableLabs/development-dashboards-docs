@@ -4346,9 +4346,9 @@ form-data@~2.3.1:
     combined-stream "1.0.6"
     mime-types "^2.1.12"
 
-formidable-landers@^8.1.7:
-  version "8.1.7"
-  resolved "https://registry.yarnpkg.com/formidable-landers/-/formidable-landers-8.1.7.tgz#ba5ce4a2ce2f1a4eeabe7640d2b3e7e6b14298c1"
+formidable-landers@^8.3.2:
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/formidable-landers/-/formidable-landers-8.3.2.tgz#71bb8902427b250dc8cd1225b70c1ef42674686b"
   dependencies:
     babel-cli "^6.26.0"
     babel-core "^6.26.3"
@@ -4364,6 +4364,7 @@ formidable-landers@^8.1.7:
     postcss-loader "^2.1.4"
     postcss-url "^7.3.2"
     prettier "^1.12.1"
+    prop-types "^15.5.8"
     react "^15.6.1"
     react-side-effect "^1.1.5"
     rimraf "^2.6.2"
