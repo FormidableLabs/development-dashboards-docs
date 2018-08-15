@@ -1,8 +1,8 @@
 language: node_js
 
 node_js:
-  - "6"
   - "8"
+  - "10"
 
 sudo: false
 
@@ -10,8 +10,13 @@ branches:
   only:
     - master
 
+# (Optional) Cache yarn installs for faster builds.
+cache: yarn
+
 install:
-  - yarn install
+  # Fail if lockfile outdated.
+  # https://yarnpkg.com/lang/en/docs/cli/install/#toc-yarn-install-frozen-lockfile
+  - yarn install --frozen-lockfile
 
 script:
   - yarn run lint
