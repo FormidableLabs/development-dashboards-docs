@@ -1,7 +1,7 @@
 {
   "name": "development-dashboards-docs",
   "description": "Formidable Open Source Development Dashboards Documentation",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "author": "Formidable <hello@formidable.com>",
   "repository": {
     "type": "git",
