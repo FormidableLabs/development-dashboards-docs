@@ -44,31 +44,7 @@ export default class Nav extends React.Component {
               spy
               to="anchor3"
             >
-              <span className="clip">Electron</span>
-            </Link>
-          </li>
-          <li className="nav__list__item">
-            <Link
-              className="nav__link"
-              activeClass="is-active"
-              duration={500}
-              smooth
-              spy
-              to="anchor4"
-            >
               <span className="clip">InspectPack</span>
-            </Link>
-          </li>
-          <li className="nav__list__item">
-            <Link
-              className="nav__link"
-              activeClass="is-active"
-              duration={500}
-              smooth
-              spy
-              to="anchor5"
-            >
-              <span className="clip">Node.js</span>
             </Link>
           </li>
         </ul>

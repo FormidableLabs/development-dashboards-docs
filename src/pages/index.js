@@ -33,27 +33,9 @@ export default class Index extends React.Component {
           </Install>
         </Section>
         <Section
-          title="Electron Webpack Dashboard"
+          title="InspectPack"
           accent="orange"
           index={2}
-          image={IMAGE_ELECTRON_WEBPACK}
-          github="https://github.com/FormidableLabs/electron-webpack-dashboard"
-        >
-          <p className="para">
-            electron-webpack-dashboard, an Electron desktop GUI, enhances
-            webpack-dashboard with slick visualizations and improved readouts.
-            No need to configure your terminal- just download, drop a couple of
-            snippets into your build, and you’re ready to go.
-          </p>
-          <Install
-            accent="orange"
-            download="https://github.com/FormidableLabs/electron-webpack-dashboard/releases/latest"
-          />
-        </Section>
-        <Section
-          title="InspectPack"
-          accent="yellow"
-          index={3}
           image={IMAGE_INSPECTPACK}
           github="https://github.com/FormidableLabs/inspectpack"
         >
@@ -64,23 +46,7 @@ export default class Index extends React.Component {
             you don’t need a dashboard, inspectpack provides you with the raw
             power tools behind webpack-dashboard and electron-webpack-dashboard.
           </p>
-          <Install accent="yellow">npm install -g inspectpack</Install>
-        </Section>
-        <Section
-          title="Node.js Dashboard"
-          accent="green"
-          index={4}
-          image={IMAGE_NODE_JS}
-          github="https://github.com/FormidableLabs/nodejs-dashboard"
-        >
-          <p className="para order-2">
-            A telemetry dashboard for Node.js apps that runs in real time to
-            show you what’s happening inside your Node.js process, right in your
-            terminal. No need to instrument code to get the details.
-          </p>
-          <Install accent="green" order={1}>
-            npm install -g nodejs-dashboard
-          </Install>
+          <Install accent="orange">npm install -g inspectpack</Install>
         </Section>
       </main>
     );
