@@ -5,9 +5,7 @@ import Nav from "../partials/nav";
 import Hero from "../partials/hero";
 // Images
 import IMAGE_WEBPACK from "../assets/product_webpack.png";
-import IMAGE_NODE_JS from "../assets/product_nodejs.png";
 import IMAGE_INSPECTPACK from "../assets/product_inspectpack.png";
-import IMAGE_ELECTRON_WEBPACK from "../assets/product_webpackelectron.jpg";
 
 // Home page
 export default class Index extends React.Component {
