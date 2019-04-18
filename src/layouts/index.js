@@ -23,7 +23,7 @@ class Layout extends React.Component {
         </Helmet>
         <Header subheader={false} />
         {children()}
-        <Footer theme="light" className="footer" styleContainer="footer" />
+        <Footer />
       </div>
     );
   }
